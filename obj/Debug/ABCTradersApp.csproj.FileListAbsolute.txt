@@ -1,0 +1,9 @@
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\ABCTradersApp.exe.config
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\ABCTradersApp.exe
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\ABCTradersApp.pdb
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.csproj.AssemblyReference.cache
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Properties.Resources.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.csproj.GenerateResource.cache
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.csproj.CoreCompileInputs.cache
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.exe
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.pdb
