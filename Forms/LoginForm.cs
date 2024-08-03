@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace ABCTradersApp
@@ -32,37 +26,113 @@ namespace ABCTradersApp
             string password = txtPassword.Text;
             string role = cmbRole.SelectedItem.ToString();
 
-           if (ValidateLogin(username, password, role))
+            if (role == "Admin")
             {
-                MessageBox.Show("Login successful!");
-
-                if (role == "Admin")
+                if (ValidateAdminLogin(username, password))
                 {
+                    MessageBox.Show("Login successful!");
                     //Open admin form
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
+                    //close login window
+                    this.Hide();
                 }
-                else if (role == "Customer")
+                else
                 {
-                    //Open customer form
-                   CustomerForm customerForm = new CustomerForm();
-                   customerForm.Show();
+                    MessageBox.Show("Invalid credentials!");
                 }
-
-                //close login window
-                this.Hide();
+                
             }
-            else
+            else if (role == "Customer")
             {
-                MessageBox.Show("Invalid credentials!");
+                if (ValidateCustomerLogin(username, password))
+                {
+                    MessageBox.Show("Login successful!");
+                    //Open customer form
+                    CustomerForm customerForm = new CustomerForm();
+                    customerForm.Show();
+                    //close login window
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid credentials!");
+                }
+              
+            }
+
+           
+        }
+
+        private bool ValidateCustomerLogin(string username, string password)
+        {
+            // Example connection string
+            string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT COUNT(1) FROM Customer WHERE Username=@Username AND Password=@Password";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    connection.Open();
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    connection.Close();
+
+                    return count == 1;
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                // Handle SQL exceptions (e.g., connection issues, command issues)
+                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                // Handle any other exceptions
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
-        private bool ValidateLogin(string username, string password, string role)
+        private bool ValidateAdminLogin(string username, string password)
         {
 
-            return true;
-       
+            // Example connection string
+            string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT COUNT(1) FROM Admin WHERE Username=@Username AND Password=@Password";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    connection.Open();
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    connection.Close();
+
+                    return count == 1;
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                // Handle SQL exceptions (e.g., connection issues, command issues)
+                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                // Handle any other exceptions
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
