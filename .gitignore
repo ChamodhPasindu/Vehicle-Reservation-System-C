@@ -1,29 +1,3 @@
-# Ignore the packages folder
-/packages/
-
-# Ignore build output directories
-/bin/
-/obj/
-
-# Ignore user-specific files
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-
-# Ignore the Visual Studio temporary files
-*.tmp
-*.log
-*.vs/
-
-# Ignore NuGet related files
-*.nupkg
-*.snupkg
-*.nuspec
-
-# Ignore the ASP.NET temporary files
-aspnet_client/
-
-# Ignore IDE specific files
-.vscode/
-.idea/
+/packages
+/bin
+/obj

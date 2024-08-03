@@ -75,4 +75,7 @@ D:\Others\TOPUP\ABCTradersApp\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dl
 D:\Others\TOPUP\ABCTradersApp\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 D:\Others\TOPUP\ABCTradersApp\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTrade.8850660C.Up2Date
-D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Login.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.LoginForm.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.AdminForm.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.CustomerForm.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.RegisterForm.resources
