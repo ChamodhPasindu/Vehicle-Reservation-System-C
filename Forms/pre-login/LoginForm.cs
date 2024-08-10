@@ -14,6 +14,8 @@ namespace ABCTradersApp
         private ComboBox cmbRole;
         private Button btnRegister;
 
+        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+
         public LoginForm()
         {
             InitializeComponent();
@@ -56,9 +58,9 @@ namespace ABCTradersApp
                 }
                 else
                 {
-                    MessageBox.Show("Invalid credentials!");
+                    MessageBox.Show("Invalid credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-              
+
             }
 
            
@@ -66,9 +68,6 @@ namespace ABCTradersApp
 
         private bool ValidateCustomerLogin(string username, string password)
         {
-            // Example connection string
-            string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
-
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -101,10 +100,6 @@ namespace ABCTradersApp
 
         private bool ValidateAdminLogin(string username, string password)
         {
-
-            // Example connection string
-            string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
-
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))

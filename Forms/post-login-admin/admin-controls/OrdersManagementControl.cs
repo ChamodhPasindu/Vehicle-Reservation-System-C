@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCTradersApp
+namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
-    public partial class AdminForm : Form
+    public partial class OrdersManagementControl : UserControl
     {
-        public AdminForm()
+        public OrdersManagementControl()
         {
             InitializeComponent();
         }

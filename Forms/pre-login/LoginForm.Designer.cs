@@ -90,6 +90,8 @@
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(234, 24);
             this.cmbRole.TabIndex = 5;
+            //set customer as default in combo
+            this.cmbRole.SelectedIndex = 0;
             // 
             // btnRegister
             // 
