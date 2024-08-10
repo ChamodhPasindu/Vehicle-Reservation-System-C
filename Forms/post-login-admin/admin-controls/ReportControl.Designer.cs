@@ -1,6 +1,6 @@
 ﻿namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
-    partial class OrdersManagementControl
+    partial class ReportControl
     {
         /// <summary> 
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
-    public partial class OrdersManagementControl : UserControl
+    public partial class DashboardControl : UserControl
     {
-        public OrdersManagementControl()
+        public DashboardControl()
         {
             InitializeComponent();
         }

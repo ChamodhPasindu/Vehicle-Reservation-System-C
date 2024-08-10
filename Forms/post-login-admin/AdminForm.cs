@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABCTradersApp.Forms.post_login_admin.admin_controls;
 
@@ -76,7 +69,7 @@ namespace ABCTradersApp
         {
             // Load order management controls into panelMainContent
             panelMainContent.Controls.Clear();
-            OrdersManagementControl orderControl = new OrdersManagementControl();
+            OrderManagementControl orderControl = new OrderManagementControl();
             orderControl.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(orderControl);
         }
@@ -84,7 +77,7 @@ namespace ABCTradersApp
         {
             // Load reports controls into panelMainContent
             panelMainContent.Controls.Clear();
-            ReportsControl reportsControl = new ReportsControl();
+            ReportControl reportsControl = new ReportControl();
             reportsControl.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(reportsControl);
         }
