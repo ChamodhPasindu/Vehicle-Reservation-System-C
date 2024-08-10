@@ -30,7 +30,7 @@ namespace ABCTradersApp
             {
                 if (ValidateAdminLogin(username, password))
                 {
-                    MessageBox.Show("Login successful!");
+                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Open admin form
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
@@ -39,7 +39,7 @@ namespace ABCTradersApp
                 }
                 else
                 {
-                    MessageBox.Show("Invalid credentials!");
+                    MessageBox.Show("Invalid credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
             }
@@ -47,7 +47,7 @@ namespace ABCTradersApp
             {
                 if (ValidateCustomerLogin(username, password))
                 {
-                    MessageBox.Show("Login successful!");
+                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Open customer form
                     CustomerForm customerForm = new CustomerForm();
                     customerForm.Show();
@@ -87,7 +87,7 @@ namespace ABCTradersApp
             }
             catch (SqlException sqlEx)
             {
-                // Handle SQL exceptions (e.g., connection issues, command issues)
+                // Handle SQL exceptions 
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
@@ -123,7 +123,7 @@ namespace ABCTradersApp
             }
             catch (SqlException sqlEx)
             {
-                // Handle SQL exceptions (e.g., connection issues, command issues)
+                // Handle SQL exceptions 
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
