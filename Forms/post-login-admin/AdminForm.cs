@@ -19,6 +19,7 @@ namespace ABCTradersApp
         private Button btnOrders;
         private Button btnReports;
         private Button btnLogout;
+        private Button btnCars;
         private Button btnDashboard;
         private Panel panelMainContent;
         public AdminForm()
