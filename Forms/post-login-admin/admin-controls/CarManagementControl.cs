@@ -88,11 +88,13 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
+            //filter cars by search text
             FilterCarsData(txtSearch.Text);
         }
 
         private void FilterCarsData(string filterText)
         {
+            //match search text with every colounm in car table 
             string rowFilter = string.Format(
          "Model LIKE '%{0}%' OR Manufacturer LIKE '%{0}%' OR CONVERT(Year, System.String) LIKE '%{0}%' OR CONVERT(Price, System.String) LIKE '%{0}%' OR Description LIKE '%{0}%'",
          filterText);
@@ -155,7 +157,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             }
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void BtnSaveOrEdit_Click(object sender, EventArgs e)
         {
             if (editCarID.HasValue)
             {
@@ -264,10 +266,12 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     command.Parameters.AddWithValue("@CarID", carID);
 
                     connection.Open();
-                    command.ExecuteNonQuery();
+                    int rows = command.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Car record deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-
-                MessageBox.Show("Car record deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadCarData(); // Refresh the table after deletion
                 ClearTextFields();
             }
@@ -288,6 +292,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             txtYear.Clear();
             txtPrice.Clear();
             txtDescription.Clear();
+            editCarID = null; // Reset edit mode
             btnSave.Text = "Save"; // Reset button text to "Save"
         }
     }

@@ -32,9 +32,11 @@
             this.txtPartNumber = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblPartName = new System.Windows.Forms.Label();
             this.lblPartNumber = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewCarParts = new System.Windows.Forms.DataGridView();
@@ -64,11 +66,19 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(501, 29);
+            this.txtDescription.Location = new System.Drawing.Point(474, 29);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(200, 60);
+            this.txtDescription.Size = new System.Drawing.Size(392, 100);
             this.txtDescription.TabIndex = 3;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(140, 157);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 22);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // lblPartName
             // 
@@ -97,6 +107,15 @@
             this.lblPrice.TabIndex = 6;
             this.lblPrice.Text = "Price";
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(20, 160);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(50, 16);
+            this.lblSearch.TabIndex = 5;
+            this.lblSearch.Text = "Search";
+            // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
@@ -108,13 +127,13 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(601, 150);
+            this.btnSave.Location = new System.Drawing.Point(766, 153);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSaveOrEdit_Click);
             // 
             // dataGridViewCarParts
             // 
@@ -123,8 +142,9 @@
             this.dataGridViewCarParts.Name = "dataGridViewCarParts";
             this.dataGridViewCarParts.RowHeadersWidth = 51;
             this.dataGridViewCarParts.RowTemplate.Height = 24;
-            this.dataGridViewCarParts.Size = new System.Drawing.Size(678, 250);
+            this.dataGridViewCarParts.Size = new System.Drawing.Size(843, 298);
             this.dataGridViewCarParts.TabIndex = 9;
+            this.dataGridViewCarParts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCars_CellClick);
             // 
             // CarPartsManagementControl
             // 
@@ -134,12 +154,14 @@
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblPartNumber);
             this.Controls.Add(this.lblPartName);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtPartNumber);
             this.Controls.Add(this.txtPartName);
+            this.Controls.Add(this.txtSearch);
             this.Name = "CarPartsManagementControl";
-            this.Size = new System.Drawing.Size(758, 526);
+            this.Size = new System.Drawing.Size(901, 526);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarParts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
