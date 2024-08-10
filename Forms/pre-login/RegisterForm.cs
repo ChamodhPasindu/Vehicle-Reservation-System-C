@@ -61,13 +61,15 @@ namespace ABCTradersApp
                         command.Parameters.AddWithValue("@Address", address);
 
                         connection.Open();
-                        command.ExecuteNonQuery();
+                        int rows = command.ExecuteNonQuery();
+                        if(rows > 0)
+                        {
+                            MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //close customer register window
+                            this.Close();
+                        }
                     }
                 }
-
-                MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //close customer register window
-                this.Close();
             }
             catch (SqlException sqlEx)
             {

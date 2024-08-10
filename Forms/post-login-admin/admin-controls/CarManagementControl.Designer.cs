@@ -40,6 +40,8 @@
             this.lblYear = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             this.dataGridViewCars.Location = new System.Drawing.Point(17, 184);
             this.dataGridViewCars.Name = "dataGridViewCars";
             this.dataGridViewCars.RowHeadersWidth = 51;
-            this.dataGridViewCars.Size = new System.Drawing.Size(722, 329);
+            this.dataGridViewCars.Size = new System.Drawing.Size(854, 329);
             this.dataGridViewCars.TabIndex = 0;
             this.dataGridViewCars.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCars_CellClick);
             // 
@@ -83,7 +85,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(338, 40);
+            this.txtDescription.Location = new System.Drawing.Point(470, 13);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(401, 100);
@@ -91,13 +93,13 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(620, 146);
+            this.btnSave.Location = new System.Drawing.Point(752, 146);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(119, 23);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSaveOrEdit_Click);
             // 
             // lblModel
             // 
@@ -138,11 +140,27 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(335, 13);
+            this.lblDescription.Location = new System.Drawing.Point(386, 13);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(78, 16);
             this.lblDescription.TabIndex = 11;
             this.lblDescription.Text = "Description:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(120, 151);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 22);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.Location = new System.Drawing.Point(14, 154);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(100, 23);
+            this.lblSearch.TabIndex = 12;
+            this.lblSearch.Text = "Search:";
             // 
             // CarManagementControl
             // 
@@ -151,15 +169,17 @@
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.lblManufacturer);
             this.Controls.Add(this.lblModel);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.txtManufacturer);
             this.Controls.Add(this.txtModel);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridViewCars);
             this.Name = "CarManagementControl";
-            this.Size = new System.Drawing.Size(758, 526);
+            this.Size = new System.Drawing.Size(901, 526);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
