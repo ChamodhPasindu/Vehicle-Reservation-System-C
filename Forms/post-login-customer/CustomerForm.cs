@@ -15,14 +15,22 @@ namespace ABCTradersApp
         private Button btnDashboard;
         private Panel panelMainContent;
 
-        public CustomerForm()
+        private int customerID;
+
+        public CustomerForm(int customerID)
         {
             InitializeComponent();
+            this.customerID = customerID;
+            LoadDashboard();
         }
 
         private void LoadDashboard()
         {
-            // Default message or content
+            // Load dashboard controls into panelMainContent initially 
+            panelMainContent.Controls.Clear();
+            DashboardControl dashboard = new DashboardControl(customerID);
+            dashboard.Dock = DockStyle.Fill;
+            panelMainContent.Controls.Add(dashboard);
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)

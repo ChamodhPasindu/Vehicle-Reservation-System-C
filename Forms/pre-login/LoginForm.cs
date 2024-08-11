@@ -21,7 +21,6 @@ namespace ABCTradersApp
             InitializeComponent();
         }
 
-
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -47,13 +46,14 @@ namespace ABCTradersApp
             }
             else if (role == "Customer")
             {
-                if (ValidateCustomerLogin(username, password))
+                int customerID = ValidateCustomerLogin(username, password);
+                if (customerID != -1)
                 {
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Open customer form
-                    CustomerForm customerForm = new CustomerForm();
+                    // Open customer form with customerID
+                    CustomerForm customerForm = new CustomerForm(customerID);
                     customerForm.Show();
-                    //close login window
+                    // Close login window
                     this.Hide();
                 }
                 else
@@ -66,35 +66,39 @@ namespace ABCTradersApp
            
         }
 
-        private bool ValidateCustomerLogin(string username, string password)
+        private int ValidateCustomerLogin(string username, string password)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT COUNT(1) FROM Customer WHERE Username=@Username AND Password=@Password";
+                    string query = "SELECT CustomerID FROM Customer WHERE Username=@Username AND Password=@Password";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@Password", password);
 
                     connection.Open();
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    object result = cmd.ExecuteScalar();
                     connection.Close();
 
-                    return count == 1;
+                    if (result != null && int.TryParse(result.ToString(), out int customerID))
+                    {
+                        return customerID;
+                    }
+                    return -1; // Invalid ID
                 }
             }
             catch (SqlException sqlEx)
             {
                 // Handle SQL exceptions 
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                return -1;
             }
             catch (Exception ex)
             {
                 // Handle any other exceptions
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                return -1;
             }
         }
 

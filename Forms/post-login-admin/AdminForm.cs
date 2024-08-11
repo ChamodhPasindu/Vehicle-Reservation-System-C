@@ -23,6 +23,7 @@ namespace ABCTradersApp
 
         private void LoadDashboard()
         {
+            panelMainContent.Controls.Clear();
             DashboardControl dashboardControl= new DashboardControl();
             dashboardControl.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(dashboardControl);
