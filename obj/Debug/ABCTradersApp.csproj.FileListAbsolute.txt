@@ -81,3 +81,4 @@ D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.CustomerForm.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.RegisterForm.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.CarManagementControl.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.CarPartsManagementControl.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.DashboardControl.resources

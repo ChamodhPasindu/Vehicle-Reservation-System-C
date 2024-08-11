@@ -285,6 +285,9 @@
     <EmbeddedResource Include="Forms\post-login-admin\admin-controls\CarPartsManagementControl.resx">
       <DependentUpon>CarPartsManagementControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\DashboardControl.resx">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-admin\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
