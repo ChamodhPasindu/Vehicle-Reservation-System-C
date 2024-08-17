@@ -9,32 +9,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABCTradersApp.Forms.post_login_customer.customer_controls
+namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
     public partial class OrderCarPartDetail : Form
     {
         private int orderID;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+        string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 
-        private Label lblOrderId;
-        private Label lblOrderDate;
+        private GroupBox groupBoxOrderInfo;
         private Label lblTotalAmount;
+        private Label lblTotalAmountLabel;
+        private Label lblOrderDate;
+        private Label lblOrderDateLabel;
+        private Label lblOrderID;
+        private Label lblOrderIDLabel;
         private DataGridView dgvCarParts;
         private Button btnClose;
-
         public OrderCarPartDetail(int orderID)
         {
             InitializeComponent();
             this.orderID = orderID;
-            LoadOrderDetails(orderID);
-            LoadOrderItems(orderID);
+            LoadOrderDetails();
+            LoadOrderItems();
         }
 
-        private void LoadOrderDetails(int orderID)
+        private void LoadOrderDetails()
         {
-            string query = @"SELECT o.OrderID, o.OrderDate, o.TotalAmount 
+            string query = @"SELECT o.OrderID, o.OrderDate, o.TotalAmount, 
+                            c.CustomerID, c.FirstName, c.LastName, c.Email, c.Phone
                      FROM CustomerOrder o
+                     JOIN Customer c ON o.CustomerID = c.CustomerID
                      WHERE o.OrderID = @OrderID";
             try
             {
@@ -42,14 +47,27 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                 {
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@OrderID", orderID);
+
                     connection.Open();
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        // Assign values to labels
-                        lblOrderId.Text = reader["OrderID"].ToString();
-                        lblOrderDate.Text = reader["OrderDate"].ToString();
-                        lblTotalAmount.Text = "LKR " + reader["TotalAmount"].ToString();
+                        if (reader.Read())
+                        {
+                            // Assign values to labels
+                            lblOrderID.Text = reader["OrderID"].ToString();
+                            lblOrderDate.Text = Convert.ToDateTime(reader["OrderDate"]).ToString("MM/dd/yyyy");
+                            lblTotalAmount.Text = "LKR " + reader["TotalAmount"].ToString();
+
+                            lblCustomerID.Text = reader["CustomerID"].ToString();
+                            lblFirstName.Text = reader["FirstName"].ToString();
+                            lblLastName.Text = reader["LastName"].ToString();
+                            lblEmail.Text = reader["Email"].ToString();
+                            lblPhone.Text = reader["Phone"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Order not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -63,10 +81,9 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                 // Handle any other exceptions
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void LoadOrderItems(int orderID)
+        private void LoadOrderItems()
         {
             string query = @"SELECT cp.PartName, oi.Quantity, oi.UnitPrice 
                      FROM OrderItem oi
@@ -100,7 +117,5 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         {
             this.Close();
         }
-
-      
     }
 }

@@ -43,7 +43,6 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable carOrdersTable = new DataTable();
                     adapter.Fill(carOrdersTable);
-                    dgvCarOrders.Columns.Clear();
                     dgvCarOrders.DataSource = carOrdersTable;
 
                     // Add "Edit" button column
@@ -81,7 +80,6 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable carPartsOrdersTable = new DataTable();
                     adapter.Fill(carPartsOrdersTable);
-                    dgvCarPartOrders.Columns.Clear();
                     dgvCarPartOrders.DataSource = carPartsOrdersTable;
 
                     // Add "Edit" button column
