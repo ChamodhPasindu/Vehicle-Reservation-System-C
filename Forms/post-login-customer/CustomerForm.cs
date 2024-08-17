@@ -67,7 +67,7 @@ namespace ABCTradersApp
         {
             // Load view car parts controls into panelMainContent
             panelMainContent.Controls.Clear();
-            ViewCarPartControl carPartControl = new ViewCarPartControl();
+            ViewCarPartControl carPartControl = new ViewCarPartControl(customerID);
             carPartControl.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(carPartControl);
         }

@@ -181,6 +181,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABCTradersDBDataSet.cs">
+      <DependentUpon>ABCTradersDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ABCTradersDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -317,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarDetail.resx">
       <DependentUpon>ViewCarDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarPartControl.resx">
+      <DependentUpon>ViewCarPartControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-customer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>

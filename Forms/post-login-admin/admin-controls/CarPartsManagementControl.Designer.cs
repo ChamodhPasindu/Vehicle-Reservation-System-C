@@ -33,6 +33,7 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtQuatity = new System.Windows.Forms.TextBox();
             this.lblPartName = new System.Windows.Forms.Label();
             this.lblPartNumber = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.lblDescription = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewCarParts = new System.Windows.Forms.DataGridView();
+            this.lblQuantity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarParts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,14 +54,14 @@
             // 
             // txtPartNumber
             // 
-            this.txtPartNumber.Location = new System.Drawing.Point(140, 70);
+            this.txtPartNumber.Location = new System.Drawing.Point(140, 60);
             this.txtPartNumber.Name = "txtPartNumber";
             this.txtPartNumber.Size = new System.Drawing.Size(200, 22);
             this.txtPartNumber.TabIndex = 1;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(140, 110);
+            this.txtPrice.Location = new System.Drawing.Point(140, 90);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(200, 22);
             this.txtPrice.TabIndex = 2;
@@ -80,6 +82,13 @@
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
+            // txtQuatity
+            // 
+            this.txtQuatity.Location = new System.Drawing.Point(140, 123);
+            this.txtQuatity.Name = "txtQuatity";
+            this.txtQuatity.Size = new System.Drawing.Size(200, 22);
+            this.txtQuatity.TabIndex = 11;
+            // 
             // lblPartName
             // 
             this.lblPartName.AutoSize = true;
@@ -92,7 +101,7 @@
             // lblPartNumber
             // 
             this.lblPartNumber.AutoSize = true;
-            this.lblPartNumber.Location = new System.Drawing.Point(20, 73);
+            this.lblPartNumber.Location = new System.Drawing.Point(20, 63);
             this.lblPartNumber.Name = "lblPartNumber";
             this.lblPartNumber.Size = new System.Drawing.Size(82, 16);
             this.lblPartNumber.TabIndex = 5;
@@ -101,7 +110,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(20, 113);
+            this.lblPrice.Location = new System.Drawing.Point(20, 93);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(38, 16);
             this.lblPrice.TabIndex = 6;
@@ -146,8 +155,19 @@
             this.dataGridViewCarParts.TabIndex = 9;
             this.dataGridViewCarParts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCars_CellClick);
             // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(19, 123);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(55, 16);
+            this.lblQuantity.TabIndex = 10;
+            this.lblQuantity.Text = "Quantity";
+            // 
             // CarPartsManagementControl
             // 
+            this.Controls.Add(this.txtQuatity);
+            this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.dataGridViewCarParts);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblDescription);
@@ -169,5 +189,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.TextBox txtQuatity;
     }
 }

@@ -41,6 +41,7 @@ CREATE TABLE CarPart (
     PartName NVARCHAR(100) NOT NULL,
     PartNumber NVARCHAR(50) NOT NULL,
     Price DECIMAL(10, 2) NOT NULL,
+    Quantity INT NOT NULL,
     Description NVARCHAR(255)
 );
 GO

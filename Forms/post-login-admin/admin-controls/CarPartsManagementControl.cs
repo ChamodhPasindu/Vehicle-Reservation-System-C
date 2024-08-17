@@ -151,6 +151,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                         txtPartNumber.Text = reader["PartNumber"].ToString();
                         txtPrice.Text = reader["Price"].ToString();
                         txtDescription.Text = reader["Description"].ToString();
+                        txtQuatity.Text = reader["Quantity"].ToString();
 
                         btnSave.Text = "Edit";
                     }
@@ -189,17 +190,19 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             string partNumber = txtPartNumber.Text;
             decimal price = decimal.Parse(txtPrice.Text);
             string description = txtDescription.Text;
+            int qty= int.Parse(txtQuatity.Text);
 
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO CarPart (PartName, PartNumber, Price, Description) VALUES (@PartName, @PartNumber, @Price, @Description)";
+                    string query = "INSERT INTO CarPart (PartName, PartNumber, Price, Description,Quantity) VALUES (@PartName, @PartNumber, @Price, @Description ,@Quantity )";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@PartName", partName);
                     command.Parameters.AddWithValue("@PartNumber", partNumber);
                     command.Parameters.AddWithValue("@Price", price);
                     command.Parameters.AddWithValue("@Description", description);
+                    command.Parameters.AddWithValue("@Quantity", qty);
 
                     connection.Open();
                     int rows = command.ExecuteNonQuery();
@@ -227,17 +230,20 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             string partNumber = txtPartNumber.Text;
             decimal price = decimal.Parse(txtPrice.Text);
             string description = txtDescription.Text;
+            int qty = int.Parse(txtQuatity.Text);
+
 
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "UPDATE CarPart SET PartName = @PartName, PartNumber = @PartNumber, Price = @Price, Description = @Description WHERE CarPartID = @PartID";
+                    string query = "UPDATE CarPart SET PartName = @PartName, PartNumber = @PartNumber, Price = @Price, Description = @Description, Quantity = @Quantity WHERE CarPartID = @PartID";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@PartName", partName);
                     command.Parameters.AddWithValue("@PartNumber", partNumber);
                     command.Parameters.AddWithValue("@Price", price);
                     command.Parameters.AddWithValue("@Description", description);
+                    command.Parameters.AddWithValue("@Quantity", qty);
                     command.Parameters.AddWithValue("@PartID", carPartID);
 
                     connection.Open();
@@ -298,6 +304,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             txtPartNumber.Text = string.Empty;
             txtPrice.Text = string.Empty;
             txtDescription.Text = string.Empty;
+            txtQuatity.Text = string.Empty;
             editCarPartID = null; // Reset edit mode
             btnSave.Text = "Save";
 
