@@ -94,3 +94,4 @@ D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.OrderManagementControl.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.OrderCarDetail.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.OrderCarPartDetail.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.ReportControl.resources

@@ -189,181 +189,184 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ABCTradersDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CarManagementControl.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\CarManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CarManagementControl.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\CarManagementControl.Designer.cs">
       <DependentUpon>CarManagementControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CarPartsManagementControl.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\CarPartsManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CarPartsManagementControl.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\CarPartsManagementControl.Designer.cs">
       <DependentUpon>CarPartsManagementControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CustomerDetailForm.cs">
+    <Compile Include="forms\post-login-admin\admin-sub-window\CustomerDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CustomerDetailForm.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-sub-window\CustomerDetailForm.Designer.cs">
       <DependentUpon>CustomerDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CustomerManagementControl.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\CustomerManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\CustomerManagementControl.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\CustomerManagementControl.Designer.cs">
       <DependentUpon>CustomerManagementControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\DashboardControl.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\DashboardControl.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\DashboardControl.Designer.cs">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\OrderCarDetail.cs">
+    <Compile Include="forms\post-login-admin\admin-sub-window\OrderCarDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\OrderCarDetail.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-sub-window\OrderCarDetail.Designer.cs">
       <DependentUpon>OrderCarDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\OrderCarPartDetail.cs">
+    <Compile Include="forms\post-login-admin\admin-sub-window\OrderCarPartDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\OrderCarPartDetail.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-sub-window\OrderCarPartDetail.Designer.cs">
       <DependentUpon>OrderCarPartDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\OrderManagementControl.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\OrderManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\OrderManagementControl.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\OrderManagementControl.Designer.cs">
       <DependentUpon>OrderManagementControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\ReportControl.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\ReportControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\admin-controls\ReportControl.Designer.cs">
+    <Compile Include="forms\post-login-admin\admin-controls\ReportControl.Designer.cs">
       <DependentUpon>ReportControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-admin\AdminForm.cs">
+    <Compile Include="forms\post-login-admin\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-admin\AdminForm.Designer.cs">
+    <Compile Include="forms\post-login-admin\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\DashboardControl.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\DashboardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\DashboardControl.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\DashboardControl.Designer.cs">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarDetail.cs">
+    <Compile Include="forms\post-login-customer\customer-sub-window\OrderCarDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarDetail.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-sub-window\OrderCarDetail.Designer.cs">
       <DependentUpon>OrderCarDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarPartDetail.cs">
+    <Compile Include="forms\post-login-customer\customer-sub-window\OrderCarPartDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarPartDetail.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-sub-window\OrderCarPartDetail.Designer.cs">
       <DependentUpon>OrderCarPartDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\OrderControl.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\OrderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\OrderControl.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\OrderControl.Designer.cs">
       <DependentUpon>OrderControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarControl.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\ViewCarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarControl.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\ViewCarControl.Designer.cs">
       <DependentUpon>ViewCarControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarDetail.cs">
+    <Compile Include="forms\post-login-customer\customer-sub-window\ViewCarDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarDetail.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-sub-window\ViewCarDetail.Designer.cs">
       <DependentUpon>ViewCarDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarPartControl.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\ViewCarPartControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarPartControl.Designer.cs">
+    <Compile Include="forms\post-login-customer\customer-controls\ViewCarPartControl.Designer.cs">
       <DependentUpon>ViewCarPartControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\post-login-customer\CustomerForm.cs">
+    <Compile Include="forms\post-login-customer\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\post-login-customer\CustomerForm.Designer.cs">
+    <Compile Include="forms\post-login-customer\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\pre-login\LoginForm.cs">
+    <Compile Include="forms\pre-login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\pre-login\LoginForm.Designer.cs">
+    <Compile Include="forms\pre-login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\pre-login\RegisterForm.cs">
+    <Compile Include="forms\pre-login\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\pre-login\RegisterForm.Designer.cs">
+    <Compile Include="forms\pre-login\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\CarManagementControl.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-controls\CarManagementControl.resx">
       <DependentUpon>CarManagementControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\CarPartsManagementControl.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-controls\CarPartsManagementControl.resx">
       <DependentUpon>CarPartsManagementControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\CustomerDetailForm.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-sub-window\CustomerDetailForm.resx">
       <DependentUpon>CustomerDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\CustomerManagementControl.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-controls\CustomerManagementControl.resx">
       <DependentUpon>CustomerManagementControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\DashboardControl.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-controls\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\OrderCarDetail.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-sub-window\OrderCarDetail.resx">
       <DependentUpon>OrderCarDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\OrderCarPartDetail.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-sub-window\OrderCarPartDetail.resx">
       <DependentUpon>OrderCarPartDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\admin-controls\OrderManagementControl.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-controls\OrderManagementControl.resx">
       <DependentUpon>OrderManagementControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-admin\AdminForm.resx">
+    <EmbeddedResource Include="forms\post-login-admin\admin-controls\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\post-login-admin\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\DashboardControl.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-controls\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\OrderCarDetail.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-sub-window\OrderCarDetail.resx">
       <DependentUpon>OrderCarDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\OrderCarPartDetail.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-sub-window\OrderCarPartDetail.resx">
       <DependentUpon>OrderCarPartDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\OrderControl.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-controls\OrderControl.resx">
       <DependentUpon>OrderControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarControl.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-controls\ViewCarControl.resx">
       <DependentUpon>ViewCarControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarDetail.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-sub-window\ViewCarDetail.resx">
       <DependentUpon>ViewCarDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarPartControl.resx">
+    <EmbeddedResource Include="forms\post-login-customer\customer-controls\ViewCarPartControl.resx">
       <DependentUpon>ViewCarPartControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\post-login-customer\CustomerForm.resx">
+    <EmbeddedResource Include="forms\post-login-customer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\pre-login\LoginForm.resx">
+    <EmbeddedResource Include="forms\pre-login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -375,7 +378,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\pre-login\RegisterForm.resx">
+    <EmbeddedResource Include="forms\pre-login\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ABCTradersDBDataSet.xsc">
