@@ -10,7 +10,6 @@ namespace ABCTradersApp
         private Button btnViewCars;
         private Button btnViewCarParts;
         private Button btnOrders;
-        private Button btnViewOrderStatus;
         private Button btnLogout;
         private Button btnDashboard;
         private Panel panelMainContent;
@@ -59,7 +58,7 @@ namespace ABCTradersApp
         {
             // Load order controls into panelMainContent
             panelMainContent.Controls.Clear();
-            OrderControl orderControl = new OrderControl();
+            OrderControl orderControl = new OrderControl(customerID);
             orderControl.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(orderControl);
         }
@@ -71,14 +70,7 @@ namespace ABCTradersApp
             carPartControl.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(carPartControl);
         }
-        private void BtnViewOrderStatus_Click(object sender, EventArgs e)
-        {
-            // Load view order controls into panelMainContent
-            panelMainContent.Controls.Clear();
-            ViewOrderControl viewOrderControl = new ViewOrderControl();
-            viewOrderControl.Dock = DockStyle.Fill;
-            panelMainContent.Controls.Add(viewOrderControl);
-        }
+        
 
     }
 }

@@ -190,7 +190,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.TextBox txtQuatity;
+       
     }
 }

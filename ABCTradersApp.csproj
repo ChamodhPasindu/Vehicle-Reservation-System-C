@@ -243,6 +243,18 @@
     <Compile Include="Forms\post-login-customer\customer-controls\DashboardControl.Designer.cs">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarDetail.Designer.cs">
+      <DependentUpon>OrderCarDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarPartDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\post-login-customer\customer-controls\OrderCarPartDetail.Designer.cs">
+      <DependentUpon>OrderCarPartDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\post-login-customer\customer-controls\OrderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -266,12 +278,6 @@
     </Compile>
     <Compile Include="Forms\post-login-customer\customer-controls\ViewCarPartControl.Designer.cs">
       <DependentUpon>ViewCarPartControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewOrderControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\post-login-customer\customer-controls\ViewOrderControl.Designer.cs">
-      <DependentUpon>ViewOrderControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\post-login-customer\CustomerForm.cs">
       <SubType>Form</SubType>
@@ -314,6 +320,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-customer\customer-controls\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\OrderCarDetail.resx">
+      <DependentUpon>OrderCarDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\OrderCarPartDetail.resx">
+      <DependentUpon>OrderCarPartDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\OrderControl.resx">
+      <DependentUpon>OrderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarControl.resx">
       <DependentUpon>ViewCarControl.cs</DependentUpon>

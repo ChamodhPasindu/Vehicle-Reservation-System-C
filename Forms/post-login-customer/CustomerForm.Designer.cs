@@ -30,7 +30,6 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnViewOrderStatus = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnViewCarParts = new System.Windows.Forms.Button();
             this.btnViewCars = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.LightGray;
             this.panelSideMenu.Controls.Add(this.btnLogout);
-            this.panelSideMenu.Controls.Add(this.btnViewOrderStatus);
             this.panelSideMenu.Controls.Add(this.btnOrders);
             this.panelSideMenu.Controls.Add(this.btnViewCarParts);
             this.panelSideMenu.Controls.Add(this.btnViewCars);
@@ -64,16 +62,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
-            // btnViewOrderStatus
-            // 
-            this.btnViewOrderStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewOrderStatus.Location = new System.Drawing.Point(0, 226);
-            this.btnViewOrderStatus.Name = "btnViewOrderStatus";
-            this.btnViewOrderStatus.Size = new System.Drawing.Size(150, 58);
-            this.btnViewOrderStatus.TabIndex = 5;
-            this.btnViewOrderStatus.Text = "View Order";
-            this.btnViewOrderStatus.Click += new System.EventHandler(this.BtnViewOrderStatus_Click);
-            // 
             // btnOrders
             // 
             this.btnOrders.Dock = System.Windows.Forms.DockStyle.Top;
@@ -81,7 +69,7 @@
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(150, 51);
             this.btnOrders.TabIndex = 4;
-            this.btnOrders.Text = "Orders";
+            this.btnOrders.Text = "My Orders";
             this.btnOrders.Click += new System.EventHandler(this.BtnOrders_Click);
             // 
             // btnViewCarParts

@@ -88,3 +88,6 @@ D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.ViewCarControl.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.ViewCarDetail.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.ViewCarPartControl.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.OrderControl.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.OrderCarDetail.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.OrderCarPartDetail.resources
