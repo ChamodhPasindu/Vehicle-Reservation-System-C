@@ -252,6 +252,12 @@
     <Compile Include="Forms\post-login-customer\customer-controls\ViewCarControl.Designer.cs">
       <DependentUpon>ViewCarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\post-login-customer\customer-controls\ViewCarDetail.Designer.cs">
+      <DependentUpon>ViewCarDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\post-login-customer\customer-controls\ViewCarPartControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,6 +311,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-customer\customer-controls\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarControl.resx">
+      <DependentUpon>ViewCarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\post-login-customer\customer-controls\ViewCarDetail.resx">
+      <DependentUpon>ViewCarDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\post-login-customer\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
