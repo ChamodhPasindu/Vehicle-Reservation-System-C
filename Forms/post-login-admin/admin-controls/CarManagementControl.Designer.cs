@@ -29,71 +29,39 @@
         private void InitializeComponent()
         {
             this.dataGridViewCars = new System.Windows.Forms.DataGridView();
-            this.txtModel = new System.Windows.Forms.TextBox();
-            this.txtManufacturer = new System.Windows.Forms.TextBox();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.lblManufacturer = new System.Windows.Forms.Label();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
+            this.groupBoxCarDetails = new System.Windows.Forms.GroupBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblYear = new System.Windows.Forms.Label();
+            this.lblManufacturer = new System.Windows.Forms.Label();
+            this.lblModel = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtManufacturer = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
+            this.groupBoxDescription = new System.Windows.Forms.GroupBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).BeginInit();
+            this.groupBoxCarDetails.SuspendLayout();
+            this.groupBoxDescription.SuspendLayout();
+            this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewCars
             // 
             this.dataGridViewCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCars.Location = new System.Drawing.Point(17, 184);
+            this.dataGridViewCars.Location = new System.Drawing.Point(17, 245);
             this.dataGridViewCars.Name = "dataGridViewCars";
             this.dataGridViewCars.RowHeadersWidth = 51;
-            this.dataGridViewCars.Size = new System.Drawing.Size(854, 329);
+            this.dataGridViewCars.Size = new System.Drawing.Size(854, 268);
             this.dataGridViewCars.TabIndex = 0;
             this.dataGridViewCars.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCars_CellClick);
             // 
-            // txtModel
-            // 
-            this.txtModel.Location = new System.Drawing.Point(120, 10);
-            this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(200, 22);
-            this.txtModel.TabIndex = 1;
-            // 
-            // txtManufacturer
-            // 
-            this.txtManufacturer.Location = new System.Drawing.Point(121, 44);
-            this.txtManufacturer.Name = "txtManufacturer";
-            this.txtManufacturer.Size = new System.Drawing.Size(200, 22);
-            this.txtManufacturer.TabIndex = 2;
-            // 
-            // txtYear
-            // 
-            this.txtYear.Location = new System.Drawing.Point(121, 81);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(200, 22);
-            this.txtYear.TabIndex = 3;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(120, 118);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(200, 22);
-            this.txtPrice.TabIndex = 4;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(470, 13);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(401, 100);
-            this.txtDescription.TabIndex = 5;
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(752, 146);
+            this.btnSave.Location = new System.Drawing.Point(752, 189);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(119, 23);
             this.btnSave.TabIndex = 6;
@@ -101,91 +69,156 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSaveOrEdit_Click);
             // 
-            // lblModel
+            // txtSearch
             // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.Location = new System.Drawing.Point(10, 13);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(48, 16);
-            this.lblModel.TabIndex = 7;
-            this.lblModel.Text = "Model:";
+            this.txtSearch.Location = new System.Drawing.Point(22, 28);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(344, 22);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
-            // lblManufacturer
+            // groupBoxCarDetails
             // 
-            this.lblManufacturer.AutoSize = true;
-            this.lblManufacturer.Location = new System.Drawing.Point(11, 47);
-            this.lblManufacturer.Name = "lblManufacturer";
-            this.lblManufacturer.Size = new System.Drawing.Size(87, 16);
-            this.lblManufacturer.TabIndex = 8;
-            this.lblManufacturer.Text = "Manufacturer:";
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Location = new System.Drawing.Point(10, 84);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(39, 16);
-            this.lblYear.TabIndex = 9;
-            this.lblYear.Text = "Year:";
+            this.groupBoxCarDetails.Controls.Add(this.lblPrice);
+            this.groupBoxCarDetails.Controls.Add(this.lblYear);
+            this.groupBoxCarDetails.Controls.Add(this.lblManufacturer);
+            this.groupBoxCarDetails.Controls.Add(this.lblModel);
+            this.groupBoxCarDetails.Controls.Add(this.txtPrice);
+            this.groupBoxCarDetails.Controls.Add(this.txtYear);
+            this.groupBoxCarDetails.Controls.Add(this.txtManufacturer);
+            this.groupBoxCarDetails.Controls.Add(this.txtModel);
+            this.groupBoxCarDetails.Location = new System.Drawing.Point(17, 13);
+            this.groupBoxCarDetails.Name = "groupBoxCarDetails";
+            this.groupBoxCarDetails.Size = new System.Drawing.Size(386, 156);
+            this.groupBoxCarDetails.TabIndex = 14;
+            this.groupBoxCarDetails.TabStop = false;
+            this.groupBoxCarDetails.Text = "Car Details";
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(10, 121);
+            this.lblPrice.Location = new System.Drawing.Point(20, 119);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 16);
-            this.lblPrice.TabIndex = 10;
+            this.lblPrice.TabIndex = 18;
             this.lblPrice.Text = "Price:";
             // 
-            // lblDescription
+            // lblYear
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(386, 13);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(78, 16);
-            this.lblDescription.TabIndex = 11;
-            this.lblDescription.Text = "Description:";
+            this.lblYear.AutoSize = true;
+            this.lblYear.Location = new System.Drawing.Point(19, 88);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(39, 16);
+            this.lblYear.TabIndex = 17;
+            this.lblYear.Text = "Year:";
             // 
-            // txtSearch
+            // lblManufacturer
             // 
-            this.txtSearch.Location = new System.Drawing.Point(120, 151);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 22);
-            this.txtSearch.TabIndex = 13;
-            this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
+            this.lblManufacturer.AutoSize = true;
+            this.lblManufacturer.Location = new System.Drawing.Point(19, 59);
+            this.lblManufacturer.Name = "lblManufacturer";
+            this.lblManufacturer.Size = new System.Drawing.Size(87, 16);
+            this.lblManufacturer.TabIndex = 16;
+            this.lblManufacturer.Text = "Manufacturer:";
             // 
-            // lblSearch
+            // lblModel
             // 
-            this.lblSearch.Location = new System.Drawing.Point(14, 154);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(100, 23);
-            this.lblSearch.TabIndex = 12;
-            this.lblSearch.Text = "Search:";
+            this.lblModel.AutoSize = true;
+            this.lblModel.Location = new System.Drawing.Point(20, 32);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(48, 16);
+            this.lblModel.TabIndex = 15;
+            this.lblModel.Text = "Model:";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(130, 116);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(200, 22);
+            this.txtPrice.TabIndex = 14;
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(130, 85);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(200, 22);
+            this.txtYear.TabIndex = 13;
+            // 
+            // txtManufacturer
+            // 
+            this.txtManufacturer.Location = new System.Drawing.Point(130, 56);
+            this.txtManufacturer.Name = "txtManufacturer";
+            this.txtManufacturer.Size = new System.Drawing.Size(200, 22);
+            this.txtManufacturer.TabIndex = 12;
+            // 
+            // txtModel
+            // 
+            this.txtModel.Location = new System.Drawing.Point(130, 29);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(200, 22);
+            this.txtModel.TabIndex = 11;
+            // 
+            // groupBoxDescription
+            // 
+            this.groupBoxDescription.Controls.Add(this.txtDescription);
+            this.groupBoxDescription.Location = new System.Drawing.Point(426, 13);
+            this.groupBoxDescription.Name = "groupBoxDescription";
+            this.groupBoxDescription.Size = new System.Drawing.Size(445, 156);
+            this.groupBoxDescription.TabIndex = 15;
+            this.groupBoxDescription.TabStop = false;
+            this.groupBoxDescription.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(22, 22);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(401, 113);
+            this.txtDescription.TabIndex = 6;
+            // 
+            // groupBoxSearch
+            // 
+            this.groupBoxSearch.Controls.Add(this.txtSearch);
+            this.groupBoxSearch.Location = new System.Drawing.Point(17, 172);
+            this.groupBoxSearch.Name = "groupBoxSearch";
+            this.groupBoxSearch.Size = new System.Drawing.Size(386, 62);
+            this.groupBoxSearch.TabIndex = 16;
+            this.groupBoxSearch.TabStop = false;
+            this.groupBoxSearch.Text = "Search";
             // 
             // CarManagementControl
             // 
-            this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.lblYear);
-            this.Controls.Add(this.lblManufacturer);
-            this.Controls.Add(this.lblModel);
-            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.groupBoxSearch);
+            this.Controls.Add(this.groupBoxDescription);
+            this.Controls.Add(this.groupBoxCarDetails);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtYear);
-            this.Controls.Add(this.txtManufacturer);
-            this.Controls.Add(this.txtModel);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridViewCars);
             this.Name = "CarManagementControl";
             this.Size = new System.Drawing.Size(901, 526);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).EndInit();
+            this.groupBoxCarDetails.ResumeLayout(false);
+            this.groupBoxCarDetails.PerformLayout();
+            this.groupBoxDescription.ResumeLayout(false);
+            this.groupBoxDescription.PerformLayout();
+            this.groupBoxSearch.ResumeLayout(false);
+            this.groupBoxSearch.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBoxCarDetails;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblYear;
+        private System.Windows.Forms.Label lblManufacturer;
+        private System.Windows.Forms.Label lblModel;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtManufacturer;
+        private System.Windows.Forms.TextBox txtModel;
+        private System.Windows.Forms.GroupBox groupBoxDescription;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.GroupBox groupBoxSearch;
     }
 }

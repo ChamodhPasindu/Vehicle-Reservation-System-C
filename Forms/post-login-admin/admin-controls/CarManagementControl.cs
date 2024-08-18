@@ -15,19 +15,8 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
     {
 
         private DataGridView dataGridViewCars;
-        private TextBox txtModel;
-        private TextBox txtManufacturer;
-        private TextBox txtYear;
-        private TextBox txtPrice;
-        private TextBox txtDescription;
         private TextBox txtSearch;
         private Button btnSave;
-        private Label lblModel;
-        private Label lblManufacturer;
-        private Label lblYear;
-        private Label lblPrice;
-        private Label lblDescription;
-        private Label lblSearch;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
         private int? editCarID = null;

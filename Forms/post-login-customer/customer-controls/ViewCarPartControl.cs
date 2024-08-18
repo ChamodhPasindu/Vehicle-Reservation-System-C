@@ -21,15 +21,10 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private Label lblAvailableQuantity;
         private TextBox txtOrderQuantity;
         private Button btnAddToCart;
-        private Button btnOrder;
-        private DataGridView cartGridView;
         private DataGridViewTextBoxColumn PartNameColumn;
         private DataGridViewTextBoxColumn PartNumberColumn;
         private DataGridViewTextBoxColumn QuantityColumn;
         private DataGridViewTextBoxColumn PriceColumn;
-        private DataGridViewTextBoxColumn TotalColumn;
-        private Label lblTotalValue;
-        private Label lblTotalLabel;
 
         private int customerID;
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
@@ -221,5 +216,6 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         }
 
+        
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 {
-    public partial class DashboardControl : UserControl
+    public partial class s : UserControl
     {
 
         private Label lblTotalCarParts;
@@ -26,7 +26,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 
-        public DashboardControl(int customerID)
+        public s(int customerID)
         {
             InitializeComponent();
             this.customerID = customerID;

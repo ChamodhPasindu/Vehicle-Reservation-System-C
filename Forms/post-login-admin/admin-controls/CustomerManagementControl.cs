@@ -14,8 +14,8 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
     public partial class CustomerManagementControl : UserControl
     {
         private TextBox txtSearch;
-        private Label lblSearch;
         private DataGridView dataGridViewCustomers;
+        private GroupBox groupBoxSearch;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 

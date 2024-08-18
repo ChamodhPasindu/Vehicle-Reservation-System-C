@@ -33,51 +33,54 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewCustomers = new System.Windows.Forms.DataGridView();
-            this.lblSearch = new System.Windows.Forms.Label();
+            this.groupBoxSearch = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
+            this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(81, 18);
+            this.txtSearch.Location = new System.Drawing.Point(21, 21);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(300, 22);
+            this.txtSearch.Size = new System.Drawing.Size(346, 22);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // dataGridViewCustomers
             // 
             this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomers.Location = new System.Drawing.Point(20, 60);
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(20, 82);
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
             this.dataGridViewCustomers.RowHeadersWidth = 51;
             this.dataGridViewCustomers.RowTemplate.Height = 24;
-            this.dataGridViewCustomers.Size = new System.Drawing.Size(800, 400);
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(800, 378);
             this.dataGridViewCustomers.TabIndex = 1;
             this.dataGridViewCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCustomers_CellClick);
             // 
-            // lblSearch
+            // groupBoxSearch
             // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(19, 21);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(56, 16);
-            this.lblSearch.TabIndex = 2;
-            this.lblSearch.Text = "Search :";
+            this.groupBoxSearch.Controls.Add(this.txtSearch);
+            this.groupBoxSearch.Location = new System.Drawing.Point(20, 10);
+            this.groupBoxSearch.Name = "groupBoxSearch";
+            this.groupBoxSearch.Size = new System.Drawing.Size(386, 62);
+            this.groupBoxSearch.TabIndex = 20;
+            this.groupBoxSearch.TabStop = false;
+            this.groupBoxSearch.Text = "Search";
             // 
             // CustomerManagementControl
             // 
-            this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.dataGridViewCustomers);
             this.Name = "CustomerManagementControl";
             this.Size = new System.Drawing.Size(850, 500);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
+            this.groupBoxSearch.ResumeLayout(false);
+            this.groupBoxSearch.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
     }
 }

@@ -23,8 +23,6 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private Label lblPartName;
         private Label lblPartNumber;
         private Label lblPrice;
-        private Label lblDescription;
-        private Label lblSearch;
         private Button btnSave;
         private Label lblQuantity;
         private TextBox txtQuatity;

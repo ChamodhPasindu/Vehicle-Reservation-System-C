@@ -37,26 +37,30 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.lblAvailableQuantity = new System.Windows.Forms.Label();
             this.txtOrderQuantity = new System.Windows.Forms.TextBox();
             this.btnAddToCart = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.cartGridView = new System.Windows.Forms.DataGridView();
-            this.PartNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PartNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotalValue = new System.Windows.Forms.Label();
-            this.lblTotalLabel = new System.Windows.Forms.Label();
             this.lblStaticPartNo = new System.Windows.Forms.Label();
             this.lblStaticPrice = new System.Windows.Forms.Label();
             this.lblStaticDescription = new System.Windows.Forms.Label();
             this.lblStaticQty = new System.Windows.Forms.Label();
+            this.groupBoxOrderDetails = new System.Windows.Forms.GroupBox();
+            this.groupBoxCarParts = new System.Windows.Forms.GroupBox();
+            this.lblTotalLabel = new System.Windows.Forms.Label();
+            this.lblTotalValue = new System.Windows.Forms.Label();
+            this.cartGridView = new System.Windows.Forms.DataGridView();
+            this.PartName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.groupBoxOrderDetails.SuspendLayout();
+            this.groupBoxCarParts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPartName
             // 
             this.cmbPartName.FormattingEnabled = true;
-            this.cmbPartName.Location = new System.Drawing.Point(68, 12);
+            this.cmbPartName.Location = new System.Drawing.Point(29, 23);
             this.cmbPartName.Name = "cmbPartName";
             this.cmbPartName.Size = new System.Drawing.Size(200, 24);
             this.cmbPartName.TabIndex = 0;
@@ -65,7 +69,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblPartNumber
             // 
             this.lblPartNumber.AutoSize = true;
-            this.lblPartNumber.Location = new System.Drawing.Point(225, 49);
+            this.lblPartNumber.Location = new System.Drawing.Point(186, 60);
             this.lblPartNumber.Name = "lblPartNumber";
             this.lblPartNumber.Size = new System.Drawing.Size(0, 16);
             this.lblPartNumber.TabIndex = 1;
@@ -73,7 +77,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(225, 85);
+            this.lblPrice.Location = new System.Drawing.Point(186, 96);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(0, 16);
             this.lblPrice.TabIndex = 2;
@@ -81,7 +85,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(225, 117);
+            this.lblDescription.Location = new System.Drawing.Point(186, 128);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(0, 16);
             this.lblDescription.TabIndex = 3;
@@ -89,21 +93,21 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblAvailableQuantity
             // 
             this.lblAvailableQuantity.AutoSize = true;
-            this.lblAvailableQuantity.Location = new System.Drawing.Point(225, 151);
+            this.lblAvailableQuantity.Location = new System.Drawing.Point(186, 162);
             this.lblAvailableQuantity.Name = "lblAvailableQuantity";
             this.lblAvailableQuantity.Size = new System.Drawing.Size(0, 16);
             this.lblAvailableQuantity.TabIndex = 4;
             // 
             // txtOrderQuantity
             // 
-            this.txtOrderQuantity.Location = new System.Drawing.Point(68, 194);
+            this.txtOrderQuantity.Location = new System.Drawing.Point(29, 205);
             this.txtOrderQuantity.Name = "txtOrderQuantity";
             this.txtOrderQuantity.Size = new System.Drawing.Size(100, 22);
             this.txtOrderQuantity.TabIndex = 5;
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Location = new System.Drawing.Point(174, 192);
+            this.btnAddToCart.Location = new System.Drawing.Point(135, 203);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(94, 23);
             this.btnAddToCart.TabIndex = 6;
@@ -111,92 +115,10 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.btnAddToCart.UseVisualStyleBackColor = true;
             this.btnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
             // 
-            // btnOrder
-            // 
-            this.btnOrder.Location = new System.Drawing.Point(553, 444);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(200, 23);
-            this.btnOrder.TabIndex = 7;
-            this.btnOrder.Text = "Place Order";
-            this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
-            // 
-            // cartGridView
-            // 
-            this.cartGridView.AllowUserToAddRows = false;
-            this.cartGridView.AllowUserToDeleteRows = false;
-            this.cartGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.cartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cartGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PartNameColumn,
-            this.PartNumberColumn,
-            this.QuantityColumn,
-            this.PriceColumn,
-            this.TotalColumn});
-            this.cartGridView.Location = new System.Drawing.Point(68, 261);
-            this.cartGridView.Name = "cartGridView";
-            this.cartGridView.ReadOnly = true;
-            this.cartGridView.RowHeadersWidth = 51;
-            this.cartGridView.Size = new System.Drawing.Size(716, 150);
-            this.cartGridView.TabIndex = 8;
-            // 
-            // PartNameColumn
-            // 
-            this.PartNameColumn.HeaderText = "Part Name";
-            this.PartNameColumn.MinimumWidth = 6;
-            this.PartNameColumn.Name = "PartName";
-            this.PartNameColumn.ReadOnly = true;
-            // 
-            // PartNumberColumn
-            // 
-            this.PartNumberColumn.HeaderText = "Part Number";
-            this.PartNumberColumn.MinimumWidth = 6;
-            this.PartNumberColumn.Name = "PartNumber";
-            this.PartNumberColumn.ReadOnly = true;
-            // 
-            // QuantityColumn
-            // 
-            this.QuantityColumn.HeaderText = "Quantity";
-            this.QuantityColumn.MinimumWidth = 6;
-            this.QuantityColumn.Name = "Quantity";
-            this.QuantityColumn.ReadOnly = true;
-            // 
-            // PriceColumn
-            // 
-            this.PriceColumn.HeaderText = "Price";
-            this.PriceColumn.MinimumWidth = 6;
-            this.PriceColumn.Name = "Price";
-            this.PriceColumn.ReadOnly = true;
-            // 
-            // TotalColumn
-            // 
-            this.TotalColumn.HeaderText = "Total";
-            this.TotalColumn.MinimumWidth = 6;
-            this.TotalColumn.Name = "TotalColumn";
-            this.TotalColumn.ReadOnly = true;
-            // 
-            // lblTotalValue
-            // 
-            this.lblTotalValue.AutoSize = true;
-            this.lblTotalValue.Location = new System.Drawing.Point(132, 447);
-            this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(14, 16);
-            this.lblTotalValue.TabIndex = 10;
-            this.lblTotalValue.Text = "0";
-            // 
-            // lblTotalLabel
-            // 
-            this.lblTotalLabel.AutoSize = true;
-            this.lblTotalLabel.Location = new System.Drawing.Point(73, 447);
-            this.lblTotalLabel.Name = "lblTotalLabel";
-            this.lblTotalLabel.Size = new System.Drawing.Size(41, 16);
-            this.lblTotalLabel.TabIndex = 9;
-            this.lblTotalLabel.Text = "Total:";
-            // 
             // lblStaticPartNo
             // 
             this.lblStaticPartNo.AutoSize = true;
-            this.lblStaticPartNo.Location = new System.Drawing.Point(68, 49);
+            this.lblStaticPartNo.Location = new System.Drawing.Point(29, 60);
             this.lblStaticPartNo.Name = "lblStaticPartNo";
             this.lblStaticPartNo.Size = new System.Drawing.Size(85, 16);
             this.lblStaticPartNo.TabIndex = 11;
@@ -205,7 +127,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblStaticPrice
             // 
             this.lblStaticPrice.AutoSize = true;
-            this.lblStaticPrice.Location = new System.Drawing.Point(69, 84);
+            this.lblStaticPrice.Location = new System.Drawing.Point(30, 95);
             this.lblStaticPrice.Name = "lblStaticPrice";
             this.lblStaticPrice.Size = new System.Drawing.Size(41, 16);
             this.lblStaticPrice.TabIndex = 12;
@@ -214,7 +136,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblStaticDescription
             // 
             this.lblStaticDescription.AutoSize = true;
-            this.lblStaticDescription.Location = new System.Drawing.Point(68, 116);
+            this.lblStaticDescription.Location = new System.Drawing.Point(29, 127);
             this.lblStaticDescription.Name = "lblStaticDescription";
             this.lblStaticDescription.Size = new System.Drawing.Size(78, 16);
             this.lblStaticDescription.TabIndex = 13;
@@ -223,34 +145,139 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // lblStaticQty
             // 
             this.lblStaticQty.AutoSize = true;
-            this.lblStaticQty.Location = new System.Drawing.Point(69, 150);
+            this.lblStaticQty.Location = new System.Drawing.Point(30, 161);
             this.lblStaticQty.Name = "lblStaticQty";
             this.lblStaticQty.Size = new System.Drawing.Size(118, 16);
             this.lblStaticQty.TabIndex = 14;
             this.lblStaticQty.Text = "Available Quantity:";
             // 
+            // groupBoxOrderDetails
+            // 
+            this.groupBoxOrderDetails.Controls.Add(this.cmbPartName);
+            this.groupBoxOrderDetails.Controls.Add(this.lblStaticQty);
+            this.groupBoxOrderDetails.Controls.Add(this.lblPartNumber);
+            this.groupBoxOrderDetails.Controls.Add(this.lblStaticDescription);
+            this.groupBoxOrderDetails.Controls.Add(this.lblPrice);
+            this.groupBoxOrderDetails.Controls.Add(this.lblStaticPrice);
+            this.groupBoxOrderDetails.Controls.Add(this.lblDescription);
+            this.groupBoxOrderDetails.Controls.Add(this.lblStaticPartNo);
+            this.groupBoxOrderDetails.Controls.Add(this.lblAvailableQuantity);
+            this.groupBoxOrderDetails.Controls.Add(this.txtOrderQuantity);
+            this.groupBoxOrderDetails.Controls.Add(this.btnAddToCart);
+            this.groupBoxOrderDetails.Location = new System.Drawing.Point(68, 16);
+            this.groupBoxOrderDetails.Name = "groupBoxOrderDetails";
+            this.groupBoxOrderDetails.Size = new System.Drawing.Size(348, 244);
+            this.groupBoxOrderDetails.TabIndex = 15;
+            this.groupBoxOrderDetails.TabStop = false;
+            this.groupBoxOrderDetails.Text = "Order Details";
+            // 
+            // groupBoxCarParts
+            // 
+            this.groupBoxCarParts.Controls.Add(this.lblTotalLabel);
+            this.groupBoxCarParts.Controls.Add(this.lblTotalValue);
+            this.groupBoxCarParts.Controls.Add(this.cartGridView);
+            this.groupBoxCarParts.Controls.Add(this.btnOrder);
+            this.groupBoxCarParts.Location = new System.Drawing.Point(68, 266);
+            this.groupBoxCarParts.Name = "groupBoxCarParts";
+            this.groupBoxCarParts.Size = new System.Drawing.Size(750, 216);
+            this.groupBoxCarParts.TabIndex = 15;
+            this.groupBoxCarParts.TabStop = false;
+            this.groupBoxCarParts.Text = "Car Parts";
+            // 
+            // lblTotalLabel
+            // 
+            this.lblTotalLabel.AutoSize = true;
+            this.lblTotalLabel.Location = new System.Drawing.Point(19, 188);
+            this.lblTotalLabel.Name = "lblTotalLabel";
+            this.lblTotalLabel.Size = new System.Drawing.Size(41, 16);
+            this.lblTotalLabel.TabIndex = 13;
+            this.lblTotalLabel.Text = "Total:";
+            // 
+            // lblTotalValue
+            // 
+            this.lblTotalValue.AutoSize = true;
+            this.lblTotalValue.Location = new System.Drawing.Point(78, 188);
+            this.lblTotalValue.Name = "lblTotalValue";
+            this.lblTotalValue.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalValue.TabIndex = 14;
+            this.lblTotalValue.Text = "0";
+            // 
+            // cartGridView
+            // 
+            this.cartGridView.AllowUserToAddRows = false;
+            this.cartGridView.AllowUserToDeleteRows = false;
+            this.cartGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cartGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PartName,
+            this.PartNumber,
+            this.Quantity,
+            this.Price,
+            this.TotalColumn});
+            this.cartGridView.Location = new System.Drawing.Point(14, 26);
+            this.cartGridView.Name = "cartGridView";
+            this.cartGridView.ReadOnly = true;
+            this.cartGridView.RowHeadersWidth = 51;
+            this.cartGridView.Size = new System.Drawing.Size(716, 150);
+            this.cartGridView.TabIndex = 12;
+            // 
+            // PartName
+            // 
+            this.PartName.HeaderText = "Part Name";
+            this.PartName.MinimumWidth = 6;
+            this.PartName.Name = "PartName";
+            this.PartName.ReadOnly = true;
+            // 
+            // PartNumber
+            // 
+            this.PartNumber.HeaderText = "Part Number";
+            this.PartNumber.MinimumWidth = 6;
+            this.PartNumber.Name = "PartNumber";
+            this.PartNumber.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // TotalColumn
+            // 
+            this.TotalColumn.HeaderText = "Total";
+            this.TotalColumn.MinimumWidth = 6;
+            this.TotalColumn.Name = "TotalColumn";
+            this.TotalColumn.ReadOnly = true;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(530, 185);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(200, 23);
+            this.btnOrder.TabIndex = 11;
+            this.btnOrder.Text = "Place Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
+            // 
             // ViewCarPartControl
             // 
-            this.Controls.Add(this.lblStaticQty);
-            this.Controls.Add(this.lblStaticDescription);
-            this.Controls.Add(this.lblStaticPrice);
-            this.Controls.Add(this.lblStaticPartNo);
-            this.Controls.Add(this.lblTotalLabel);
-            this.Controls.Add(this.lblTotalValue);
-            this.Controls.Add(this.cartGridView);
-            this.Controls.Add(this.btnOrder);
-            this.Controls.Add(this.btnAddToCart);
-            this.Controls.Add(this.txtOrderQuantity);
-            this.Controls.Add(this.lblAvailableQuantity);
-            this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.lblPartNumber);
-            this.Controls.Add(this.cmbPartName);
+            this.Controls.Add(this.groupBoxCarParts);
+            this.Controls.Add(this.groupBoxOrderDetails);
             this.Name = "ViewCarPartControl";
             this.Size = new System.Drawing.Size(850, 500);
+            this.groupBoxOrderDetails.ResumeLayout(false);
+            this.groupBoxOrderDetails.PerformLayout();
+            this.groupBoxCarParts.ResumeLayout(false);
+            this.groupBoxCarParts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -260,5 +287,16 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private Label lblStaticPrice;
         private Label lblStaticDescription;
         private Label lblStaticQty;
+        private GroupBox groupBoxOrderDetails;
+        private GroupBox groupBoxCarParts;
+        private Label lblTotalLabel;
+        private Label lblTotalValue;
+        private DataGridView cartGridView;
+        private DataGridViewTextBoxColumn PartName;
+        private DataGridViewTextBoxColumn PartNumber;
+        private DataGridViewTextBoxColumn Quantity;
+        private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn TotalColumn;
+        private Button btnOrder;
     }
 }
