@@ -72,6 +72,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.Location = new System.Drawing.Point(11, 31);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -80,6 +81,7 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(23, 21);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(342, 22);

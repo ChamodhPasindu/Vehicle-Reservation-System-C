@@ -36,6 +36,7 @@
             this.groupBoxCars = new System.Windows.Forms.GroupBox();
             this.groupBoxCarParts = new System.Windows.Forms.GroupBox();
             this.groupBoxOrders = new System.Windows.Forms.GroupBox();
+            this.lblDashboard = new System.Windows.Forms.Label();
             this.groupBoxCustomers.SuspendLayout();
             this.groupBoxCars.SuspendLayout();
             this.groupBoxCarParts.SuspendLayout();
@@ -86,7 +87,7 @@
             // 
             this.groupBoxCustomers.Controls.Add(this.lblCustomersCount);
             this.groupBoxCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCustomers.Location = new System.Drawing.Point(41, 43);
+            this.groupBoxCustomers.Location = new System.Drawing.Point(54, 97);
             this.groupBoxCustomers.Name = "groupBoxCustomers";
             this.groupBoxCustomers.Size = new System.Drawing.Size(321, 100);
             this.groupBoxCustomers.TabIndex = 4;
@@ -97,7 +98,7 @@
             // 
             this.groupBoxCars.Controls.Add(this.lblCarsCount);
             this.groupBoxCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCars.Location = new System.Drawing.Point(488, 43);
+            this.groupBoxCars.Location = new System.Drawing.Point(501, 97);
             this.groupBoxCars.Name = "groupBoxCars";
             this.groupBoxCars.Size = new System.Drawing.Size(327, 100);
             this.groupBoxCars.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             this.groupBoxCarParts.Controls.Add(this.lblCarPartsCount);
             this.groupBoxCarParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCarParts.Location = new System.Drawing.Point(41, 178);
+            this.groupBoxCarParts.Location = new System.Drawing.Point(54, 232);
             this.groupBoxCarParts.Name = "groupBoxCarParts";
             this.groupBoxCarParts.Size = new System.Drawing.Size(321, 100);
             this.groupBoxCarParts.TabIndex = 6;
@@ -119,15 +120,26 @@
             // 
             this.groupBoxOrders.Controls.Add(this.lblOrdersCount);
             this.groupBoxOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxOrders.Location = new System.Drawing.Point(488, 178);
+            this.groupBoxOrders.Location = new System.Drawing.Point(501, 232);
             this.groupBoxOrders.Name = "groupBoxOrders";
             this.groupBoxOrders.Size = new System.Drawing.Size(327, 100);
             this.groupBoxOrders.TabIndex = 7;
             this.groupBoxOrders.TabStop = false;
             this.groupBoxOrders.Text = "Total Orders";
             // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Location = new System.Drawing.Point(61, 24);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(145, 29);
+            this.lblDashboard.TabIndex = 8;
+            this.lblDashboard.Text = "Dashboard";
+            // 
             // DashboardControl
             // 
+            this.Controls.Add(this.lblDashboard);
             this.Controls.Add(this.groupBoxOrders);
             this.Controls.Add(this.groupBoxCarParts);
             this.Controls.Add(this.groupBoxCars);
@@ -143,11 +155,13 @@
             this.groupBoxOrders.ResumeLayout(false);
             this.groupBoxOrders.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
+
         #endregion
 
-     
+        private System.Windows.Forms.Label lblDashboard;
     }
 }

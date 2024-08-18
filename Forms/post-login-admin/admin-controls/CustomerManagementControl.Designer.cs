@@ -40,6 +40,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             // txtSearch
             // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(21, 21);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(346, 22);

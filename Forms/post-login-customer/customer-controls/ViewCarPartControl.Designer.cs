@@ -52,6 +52,8 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.lblOrder = new System.Windows.Forms.Label();
+            this.lblStaticQuantity = new System.Windows.Forms.Label();
             this.groupBoxOrderDetails.SuspendLayout();
             this.groupBoxCarParts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartGridView)).BeginInit();
@@ -61,7 +63,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.cmbPartName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPartName.FormattingEnabled = true;
-            this.cmbPartName.Location = new System.Drawing.Point(29, 23);
+            this.cmbPartName.Location = new System.Drawing.Point(29, 28);
             this.cmbPartName.Name = "cmbPartName";
             this.cmbPartName.Size = new System.Drawing.Size(200, 24);
             this.cmbPartName.TabIndex = 0;
@@ -71,7 +73,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblPartNumber.AutoSize = true;
             this.lblPartNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPartNumber.Location = new System.Drawing.Point(186, 60);
+            this.lblPartNumber.Location = new System.Drawing.Point(433, 36);
             this.lblPartNumber.Name = "lblPartNumber";
             this.lblPartNumber.Size = new System.Drawing.Size(0, 16);
             this.lblPartNumber.TabIndex = 1;
@@ -80,7 +82,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(186, 96);
+            this.lblPrice.Location = new System.Drawing.Point(433, 72);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(0, 16);
             this.lblPrice.TabIndex = 2;
@@ -89,7 +91,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(186, 128);
+            this.lblDescription.Location = new System.Drawing.Point(433, 106);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(0, 16);
             this.lblDescription.TabIndex = 3;
@@ -98,7 +100,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblAvailableQuantity.AutoSize = true;
             this.lblAvailableQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailableQuantity.Location = new System.Drawing.Point(186, 162);
+            this.lblAvailableQuantity.Location = new System.Drawing.Point(433, 140);
             this.lblAvailableQuantity.Name = "lblAvailableQuantity";
             this.lblAvailableQuantity.Size = new System.Drawing.Size(0, 16);
             this.lblAvailableQuantity.TabIndex = 4;
@@ -106,7 +108,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // txtOrderQuantity
             // 
             this.txtOrderQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderQuantity.Location = new System.Drawing.Point(29, 205);
+            this.txtOrderQuantity.Location = new System.Drawing.Point(436, 171);
             this.txtOrderQuantity.Name = "txtOrderQuantity";
             this.txtOrderQuantity.Size = new System.Drawing.Size(100, 22);
             this.txtOrderQuantity.TabIndex = 5;
@@ -114,7 +116,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // btnAddToCart
             // 
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.Location = new System.Drawing.Point(135, 203);
+            this.btnAddToCart.Location = new System.Drawing.Point(678, 174);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(94, 23);
             this.btnAddToCart.TabIndex = 6;
@@ -126,7 +128,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblStaticPartNo.AutoSize = true;
             this.lblStaticPartNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaticPartNo.Location = new System.Drawing.Point(29, 60);
+            this.lblStaticPartNo.Location = new System.Drawing.Point(276, 36);
             this.lblStaticPartNo.Name = "lblStaticPartNo";
             this.lblStaticPartNo.Size = new System.Drawing.Size(85, 16);
             this.lblStaticPartNo.TabIndex = 11;
@@ -136,7 +138,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblStaticPrice.AutoSize = true;
             this.lblStaticPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaticPrice.Location = new System.Drawing.Point(30, 95);
+            this.lblStaticPrice.Location = new System.Drawing.Point(277, 71);
             this.lblStaticPrice.Name = "lblStaticPrice";
             this.lblStaticPrice.Size = new System.Drawing.Size(41, 16);
             this.lblStaticPrice.TabIndex = 12;
@@ -146,7 +148,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblStaticDescription.AutoSize = true;
             this.lblStaticDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaticDescription.Location = new System.Drawing.Point(29, 127);
+            this.lblStaticDescription.Location = new System.Drawing.Point(276, 106);
             this.lblStaticDescription.Name = "lblStaticDescription";
             this.lblStaticDescription.Size = new System.Drawing.Size(78, 16);
             this.lblStaticDescription.TabIndex = 13;
@@ -156,7 +158,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             this.lblStaticQty.AutoSize = true;
             this.lblStaticQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaticQty.Location = new System.Drawing.Point(30, 161);
+            this.lblStaticQty.Location = new System.Drawing.Point(277, 140);
             this.lblStaticQty.Name = "lblStaticQty";
             this.lblStaticQty.Size = new System.Drawing.Size(118, 16);
             this.lblStaticQty.TabIndex = 14;
@@ -164,6 +166,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // 
             // groupBoxOrderDetails
             // 
+            this.groupBoxOrderDetails.Controls.Add(this.lblStaticQuantity);
             this.groupBoxOrderDetails.Controls.Add(this.cmbPartName);
             this.groupBoxOrderDetails.Controls.Add(this.lblStaticQty);
             this.groupBoxOrderDetails.Controls.Add(this.lblPartNumber);
@@ -176,9 +179,9 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.groupBoxOrderDetails.Controls.Add(this.txtOrderQuantity);
             this.groupBoxOrderDetails.Controls.Add(this.btnAddToCart);
             this.groupBoxOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxOrderDetails.Location = new System.Drawing.Point(58, 16);
+            this.groupBoxOrderDetails.Location = new System.Drawing.Point(58, 74);
             this.groupBoxOrderDetails.Name = "groupBoxOrderDetails";
-            this.groupBoxOrderDetails.Size = new System.Drawing.Size(348, 244);
+            this.groupBoxOrderDetails.Size = new System.Drawing.Size(795, 208);
             this.groupBoxOrderDetails.TabIndex = 15;
             this.groupBoxOrderDetails.TabStop = false;
             this.groupBoxOrderDetails.Text = "Order Details";
@@ -190,7 +193,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.groupBoxCarParts.Controls.Add(this.cartGridView);
             this.groupBoxCarParts.Controls.Add(this.btnOrder);
             this.groupBoxCarParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCarParts.Location = new System.Drawing.Point(58, 266);
+            this.groupBoxCarParts.Location = new System.Drawing.Point(58, 288);
             this.groupBoxCarParts.Name = "groupBoxCarParts";
             this.groupBoxCarParts.Size = new System.Drawing.Size(795, 216);
             this.groupBoxCarParts.TabIndex = 15;
@@ -280,8 +283,29 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
             // 
+            // lblOrder
+            // 
+            this.lblOrder.AutoSize = true;
+            this.lblOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrder.Location = new System.Drawing.Point(53, 14);
+            this.lblOrder.Name = "lblOrder";
+            this.lblOrder.Size = new System.Drawing.Size(222, 29);
+            this.lblOrder.TabIndex = 16;
+            this.lblOrder.Text = "Place Your Order";
+            // 
+            // lblStaticQuantity
+            // 
+            this.lblStaticQuantity.AutoSize = true;
+            this.lblStaticQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaticQuantity.Location = new System.Drawing.Point(277, 174);
+            this.lblStaticQuantity.Name = "lblStaticQuantity";
+            this.lblStaticQuantity.Size = new System.Drawing.Size(58, 16);
+            this.lblStaticQuantity.TabIndex = 15;
+            this.lblStaticQuantity.Text = "Quantity:";
+            // 
             // ViewCarPartControl
             // 
+            this.Controls.Add(this.lblOrder);
             this.Controls.Add(this.groupBoxCarParts);
             this.Controls.Add(this.groupBoxOrderDetails);
             this.Name = "ViewCarPartControl";
@@ -292,11 +316,14 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.groupBoxCarParts.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
+
         #endregion
 
-       
+        private Label lblOrder;
+        private Label lblStaticQuantity;
     }
 }
