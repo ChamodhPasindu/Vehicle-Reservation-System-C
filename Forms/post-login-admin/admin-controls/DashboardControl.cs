@@ -11,6 +11,10 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private Label lblCarsCount;
         private Label lblCarPartsCount;
         private Label lblOrdersCount;
+        private GroupBox groupBoxCustomers;
+        private GroupBox groupBoxCars;
+        private GroupBox groupBoxCarParts;
+        private GroupBox groupBoxOrders;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 

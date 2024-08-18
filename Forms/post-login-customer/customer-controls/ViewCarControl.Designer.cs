@@ -81,6 +81,5 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxSearch;
     }
 }

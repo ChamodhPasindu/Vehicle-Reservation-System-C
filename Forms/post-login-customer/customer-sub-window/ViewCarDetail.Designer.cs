@@ -189,16 +189,6 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxCarDetails;
-        private System.Windows.Forms.Label lblDescriptionValue;
-        private System.Windows.Forms.Label lblPriceValue;
-        private System.Windows.Forms.Label lblYearValue;
-        private System.Windows.Forms.Label lblManufacturerValue;
-        private System.Windows.Forms.Label lblModelValue;
-        private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Label lblManufacturer;
-        private System.Windows.Forms.Label lblModel;
+      
     }
 }

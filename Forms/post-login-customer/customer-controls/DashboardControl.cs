@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
@@ -20,6 +13,9 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private Label lblTotalCarPartsValue;
         private Label lblTotalCarsValue;
         private Label lblTotalOrdersValue;
+        private GroupBox groupBoxCarParts;
+        private GroupBox groupBoxCars;
+        private GroupBox groupBoxOrders;
 
         private int customerID;
 

@@ -145,12 +145,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBoxOrderDetails;
-        private System.Windows.Forms.Label lblStaticAmount;
-        private System.Windows.Forms.Label lblStaticOrderDate;
-        private System.Windows.Forms.Label lblStaticOrderID;
-        private System.Windows.Forms.Label lblOrderId;
-        private System.Windows.Forms.Label lblOrderDate;
-        private System.Windows.Forms.Label lblTotalAmount;
+       
     }
 }

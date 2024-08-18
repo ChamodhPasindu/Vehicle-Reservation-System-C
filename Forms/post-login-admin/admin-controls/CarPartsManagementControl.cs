@@ -26,6 +26,9 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private Button btnSave;
         private Label lblQuantity;
         private TextBox txtQuatity;
+        private GroupBox groupBoxSearch;
+        private GroupBox groupBoxDescription;
+        private GroupBox groupBoxCarPartDetails;
 
         private DataGridView dataGridViewCarParts;
 

@@ -283,20 +283,6 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         #endregion
 
-        private Label lblStaticPartNo;
-        private Label lblStaticPrice;
-        private Label lblStaticDescription;
-        private Label lblStaticQty;
-        private GroupBox groupBoxOrderDetails;
-        private GroupBox groupBoxCarParts;
-        private Label lblTotalLabel;
-        private Label lblTotalValue;
-        private DataGridView cartGridView;
-        private DataGridViewTextBoxColumn PartName;
-        private DataGridViewTextBoxColumn PartNumber;
-        private DataGridViewTextBoxColumn Quantity;
-        private DataGridViewTextBoxColumn Price;
-        private DataGridViewTextBoxColumn TotalColumn;
-        private Button btnOrder;
+       
     }
 }

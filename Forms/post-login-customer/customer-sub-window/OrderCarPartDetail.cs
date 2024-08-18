@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
@@ -18,6 +12,13 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
         private DataGridView dgvCarParts;
         private Button btnClose;
+        private GroupBox groupBoxOrderDetails;
+        private Label lblStaticAmount;
+        private Label lblStaticOrderDate;
+        private Label lblStaticOrderID;
+        private Label lblOrderId;
+        private Label lblOrderDate;
+        private Label lblTotalAmount;
 
         public OrderCarPartDetail(int orderID)
         {

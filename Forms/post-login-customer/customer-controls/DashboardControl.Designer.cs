@@ -35,10 +35,10 @@
             this.lblTotalCarsValue = new System.Windows.Forms.Label();
             this.lblTotalOrdersValue = new System.Windows.Forms.Label();
             this.groupBoxCarParts = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxCars = new System.Windows.Forms.GroupBox();
             this.groupBoxOrders = new System.Windows.Forms.GroupBox();
             this.groupBoxCarParts.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxCars.SuspendLayout();
             this.groupBoxOrders.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,16 +110,16 @@
             this.groupBoxCarParts.TabStop = false;
             this.groupBoxCarParts.Text = "Total Car Parts";
             // 
-            // groupBox1
+            // groupBoxCars
             // 
-            this.groupBox1.Controls.Add(this.lblTotalCars);
-            this.groupBox1.Controls.Add(this.lblTotalCarsValue);
-            this.groupBox1.Location = new System.Drawing.Point(470, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 100);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Total Cars";
+            this.groupBoxCars.Controls.Add(this.lblTotalCars);
+            this.groupBoxCars.Controls.Add(this.lblTotalCarsValue);
+            this.groupBoxCars.Location = new System.Drawing.Point(470, 46);
+            this.groupBoxCars.Name = "groupBoxCars";
+            this.groupBoxCars.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxCars.TabIndex = 7;
+            this.groupBoxCars.TabStop = false;
+            this.groupBoxCars.Text = "Total Cars";
             // 
             // groupBoxOrders
             // 
@@ -135,14 +135,14 @@
             // s
             // 
             this.Controls.Add(this.groupBoxOrders);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxCars);
             this.Controls.Add(this.groupBoxCarParts);
             this.Name = "s";
             this.Size = new System.Drawing.Size(901, 526);
             this.groupBoxCarParts.ResumeLayout(false);
             this.groupBoxCarParts.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxCars.ResumeLayout(false);
+            this.groupBoxCars.PerformLayout();
             this.groupBoxOrders.ResumeLayout(false);
             this.groupBoxOrders.PerformLayout();
             this.ResumeLayout(false);
@@ -151,8 +151,6 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxCarParts;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBoxOrders;
+       
     }
 }

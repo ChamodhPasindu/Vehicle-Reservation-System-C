@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ABCTradersApp.Forms.post_login_admin.admin_controls
@@ -17,6 +11,18 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private DataGridView dataGridViewCars;
         private TextBox txtSearch;
         private Button btnSave;
+        private GroupBox groupBoxCarDetails;
+        private Label lblPrice;
+        private Label lblYear;
+        private Label lblManufacturer;
+        private Label lblModel;
+        private TextBox txtPrice;
+        private TextBox txtYear;
+        private TextBox txtManufacturer;
+        private TextBox txtModel;
+        private GroupBox groupBoxDescription;
+        private TextBox txtDescription;
+        private GroupBox groupBoxSearch;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
         private int? editCarID = null;

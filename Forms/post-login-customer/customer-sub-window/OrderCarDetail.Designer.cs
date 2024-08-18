@@ -276,15 +276,6 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         #endregion
 
-        private System.Windows.Forms.Label lblStaticDescription;
-        private System.Windows.Forms.Label lblStaticPrice;
-        private System.Windows.Forms.Label lblStaticYear;
-        private System.Windows.Forms.Label lblStaticManufact;
-        private System.Windows.Forms.Label lblStaticModel;
-        private System.Windows.Forms.Label lblStaticCarID;
-        private System.Windows.Forms.Label lblStaticAmount;
-        private System.Windows.Forms.Label lblStaticOrderDate;
-        private System.Windows.Forms.Label lblStaticOrderID;
-        private System.Windows.Forms.Label lblOrderID;
+        
     }
 }

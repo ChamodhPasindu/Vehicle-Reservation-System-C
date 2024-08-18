@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 {
@@ -18,6 +10,17 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private int customerID;
         private Button btnOrder;
         private Button btnCancel;
+        private GroupBox groupBoxCarDetails;
+        private Label lblDescriptionValue;
+        private Label lblPriceValue;
+        private Label lblYearValue;
+        private Label lblManufacturerValue;
+        private Label lblModelValue;
+        private Label lblDescription;
+        private Label lblPrice;
+        private Label lblYear;
+        private Label lblManufacturer;
+        private Label lblModel;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 

@@ -210,8 +210,6 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxSearch;
-        private System.Windows.Forms.GroupBox groupBoxDescription;
-        private System.Windows.Forms.GroupBox groupBoxCarPartDetails;
+        
     }
 }

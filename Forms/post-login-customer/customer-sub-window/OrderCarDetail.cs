@@ -16,6 +16,16 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private Label lblPrice;
         private Label lblDescription;
         private Button btnClose;
+        private Label lblStaticDescription;
+        private Label lblStaticPrice;
+        private Label lblStaticYear;
+        private Label lblStaticManufact;
+        private Label lblStaticModel;
+        private Label lblStaticCarID;
+        private Label lblStaticAmount;
+        private Label lblStaticOrderDate;
+        private Label lblStaticOrderID;
+        private Label lblOrderID;
 
         private int orderID;
 

@@ -144,9 +144,6 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxCustomers;
-        private System.Windows.Forms.GroupBox groupBoxCars;
-        private System.Windows.Forms.GroupBox groupBoxCarParts;
-        private System.Windows.Forms.GroupBox groupBoxOrders;
+     
     }
 }
