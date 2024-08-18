@@ -85,9 +85,10 @@
             // groupBoxCustomers
             // 
             this.groupBoxCustomers.Controls.Add(this.lblCustomersCount);
+            this.groupBoxCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCustomers.Location = new System.Drawing.Point(41, 43);
             this.groupBoxCustomers.Name = "groupBoxCustomers";
-            this.groupBoxCustomers.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxCustomers.Size = new System.Drawing.Size(321, 100);
             this.groupBoxCustomers.TabIndex = 4;
             this.groupBoxCustomers.TabStop = false;
             this.groupBoxCustomers.Text = "Total Customers";
@@ -95,9 +96,10 @@
             // groupBoxCars
             // 
             this.groupBoxCars.Controls.Add(this.lblCarsCount);
-            this.groupBoxCars.Location = new System.Drawing.Point(470, 43);
+            this.groupBoxCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCars.Location = new System.Drawing.Point(436, 43);
             this.groupBoxCars.Name = "groupBoxCars";
-            this.groupBoxCars.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxCars.Size = new System.Drawing.Size(327, 100);
             this.groupBoxCars.TabIndex = 5;
             this.groupBoxCars.TabStop = false;
             this.groupBoxCars.Text = "Total Cars";
@@ -105,9 +107,10 @@
             // groupBoxCarParts
             // 
             this.groupBoxCarParts.Controls.Add(this.lblCarPartsCount);
+            this.groupBoxCarParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCarParts.Location = new System.Drawing.Point(41, 178);
             this.groupBoxCarParts.Name = "groupBoxCarParts";
-            this.groupBoxCarParts.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxCarParts.Size = new System.Drawing.Size(321, 100);
             this.groupBoxCarParts.TabIndex = 6;
             this.groupBoxCarParts.TabStop = false;
             this.groupBoxCarParts.Text = "Total Car Parts";
@@ -115,9 +118,10 @@
             // groupBoxOrders
             // 
             this.groupBoxOrders.Controls.Add(this.lblOrdersCount);
-            this.groupBoxOrders.Location = new System.Drawing.Point(470, 178);
+            this.groupBoxOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxOrders.Location = new System.Drawing.Point(436, 178);
             this.groupBoxOrders.Name = "groupBoxOrders";
-            this.groupBoxOrders.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxOrders.Size = new System.Drawing.Size(327, 100);
             this.groupBoxOrders.TabIndex = 7;
             this.groupBoxOrders.TabStop = false;
             this.groupBoxOrders.Text = "Total Orders";
@@ -129,7 +133,7 @@
             this.Controls.Add(this.groupBoxCars);
             this.Controls.Add(this.groupBoxCustomers);
             this.Name = "DashboardControl";
-            this.Size = new System.Drawing.Size(901, 526);
+            this.Size = new System.Drawing.Size(850, 500);
             this.groupBoxCustomers.ResumeLayout(false);
             this.groupBoxCustomers.PerformLayout();
             this.groupBoxCars.ResumeLayout(false);

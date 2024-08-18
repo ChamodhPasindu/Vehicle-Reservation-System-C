@@ -45,6 +45,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // lblFromDate
             // 
             this.lblFromDate.AutoSize = true;
+            this.lblFromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFromDate.Location = new System.Drawing.Point(16, 24);
             this.lblFromDate.Name = "lblFromDate";
             this.lblFromDate.Size = new System.Drawing.Size(73, 16);
@@ -53,6 +54,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             // dtpFromDate
             // 
+            this.dtpFromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFromDate.Location = new System.Drawing.Point(88, 21);
             this.dtpFromDate.Name = "dtpFromDate";
             this.dtpFromDate.Size = new System.Drawing.Size(242, 22);
@@ -61,6 +63,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // lblToDate
             // 
             this.lblToDate.AutoSize = true;
+            this.lblToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblToDate.Location = new System.Drawing.Point(16, 62);
             this.lblToDate.Name = "lblToDate";
             this.lblToDate.Size = new System.Drawing.Size(59, 16);
@@ -69,6 +72,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             // dtpToDate
             // 
+            this.dtpToDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpToDate.Location = new System.Drawing.Point(88, 59);
             this.dtpToDate.Name = "dtpToDate";
             this.dtpToDate.Size = new System.Drawing.Size(242, 22);
@@ -76,6 +80,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             // btnGenerateReport
             // 
+            this.btnGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateReport.Location = new System.Drawing.Point(367, 51);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(100, 30);
@@ -96,6 +101,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             // btnExportToPDF
             // 
+            this.btnExportToPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportToPDF.Location = new System.Drawing.Point(620, 51);
             this.btnExportToPDF.Name = "btnExportToPDF";
             this.btnExportToPDF.Size = new System.Drawing.Size(150, 30);
@@ -111,6 +117,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.groupBoxFilter.Controls.Add(this.lblToDate);
             this.groupBoxFilter.Controls.Add(this.lblFromDate);
             this.groupBoxFilter.Controls.Add(this.dtpToDate);
+            this.groupBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxFilter.Location = new System.Drawing.Point(12, 14);
             this.groupBoxFilter.Name = "groupBoxFilter";
             this.groupBoxFilter.Size = new System.Drawing.Size(776, 97);
@@ -128,7 +135,8 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.groupBoxFilter.ResumeLayout(false);
             this.groupBoxFilter.PerformLayout();
             this.ResumeLayout(false);
-            #endregion
+
         }
+        #endregion
     }
 }

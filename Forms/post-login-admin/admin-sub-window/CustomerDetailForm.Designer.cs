@@ -56,6 +56,7 @@
             // lblCustomerID
             // 
             this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerID.Location = new System.Drawing.Point(10, 25);
             this.lblCustomerID.Name = "lblCustomerID";
             this.lblCustomerID.Size = new System.Drawing.Size(83, 16);
@@ -65,6 +66,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(10, 55);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(75, 16);
@@ -74,6 +76,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.Location = new System.Drawing.Point(10, 85);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(75, 16);
@@ -83,6 +86,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(10, 30);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(44, 16);
@@ -92,6 +96,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.Location = new System.Drawing.Point(10, 65);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(49, 16);
@@ -101,6 +106,7 @@
             // lblNIC
             // 
             this.lblNIC.AutoSize = true;
+            this.lblNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNIC.Location = new System.Drawing.Point(10, 120);
             this.lblNIC.Name = "lblNIC";
             this.lblNIC.Size = new System.Drawing.Size(32, 16);
@@ -110,6 +116,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(10, 97);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(61, 16);
@@ -119,6 +126,7 @@
             // lblTotalOrders
             // 
             this.lblTotalOrders.AutoSize = true;
+            this.lblTotalOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalOrders.Location = new System.Drawing.Point(10, 25);
             this.lblTotalOrders.Name = "lblTotalOrders";
             this.lblTotalOrders.Size = new System.Drawing.Size(85, 16);
@@ -128,6 +136,7 @@
             // lblCustomerIDValue
             // 
             this.lblCustomerIDValue.AutoSize = true;
+            this.lblCustomerIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerIDValue.Location = new System.Drawing.Point(120, 25);
             this.lblCustomerIDValue.Name = "lblCustomerIDValue";
             this.lblCustomerIDValue.Size = new System.Drawing.Size(0, 16);
@@ -136,6 +145,7 @@
             // lblFirstNameValue
             // 
             this.lblFirstNameValue.AutoSize = true;
+            this.lblFirstNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstNameValue.Location = new System.Drawing.Point(120, 55);
             this.lblFirstNameValue.Name = "lblFirstNameValue";
             this.lblFirstNameValue.Size = new System.Drawing.Size(0, 16);
@@ -144,6 +154,7 @@
             // lblLastNameValue
             // 
             this.lblLastNameValue.AutoSize = true;
+            this.lblLastNameValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastNameValue.Location = new System.Drawing.Point(120, 85);
             this.lblLastNameValue.Name = "lblLastNameValue";
             this.lblLastNameValue.Size = new System.Drawing.Size(0, 16);
@@ -152,6 +163,7 @@
             // lblEmailValue
             // 
             this.lblEmailValue.AutoSize = true;
+            this.lblEmailValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailValue.Location = new System.Drawing.Point(120, 30);
             this.lblEmailValue.Name = "lblEmailValue";
             this.lblEmailValue.Size = new System.Drawing.Size(0, 16);
@@ -160,6 +172,7 @@
             // lblPhoneValue
             // 
             this.lblPhoneValue.AutoSize = true;
+            this.lblPhoneValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneValue.Location = new System.Drawing.Point(120, 65);
             this.lblPhoneValue.Name = "lblPhoneValue";
             this.lblPhoneValue.Size = new System.Drawing.Size(0, 16);
@@ -168,6 +181,7 @@
             // lblNICValue
             // 
             this.lblNICValue.AutoSize = true;
+            this.lblNICValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNICValue.Location = new System.Drawing.Point(120, 120);
             this.lblNICValue.Name = "lblNICValue";
             this.lblNICValue.Size = new System.Drawing.Size(0, 16);
@@ -176,6 +190,7 @@
             // lblAddressValue
             // 
             this.lblAddressValue.AutoSize = true;
+            this.lblAddressValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddressValue.Location = new System.Drawing.Point(120, 97);
             this.lblAddressValue.Name = "lblAddressValue";
             this.lblAddressValue.Size = new System.Drawing.Size(0, 16);
@@ -184,6 +199,7 @@
             // lblTotalOrdersValue
             // 
             this.lblTotalOrdersValue.AutoSize = true;
+            this.lblTotalOrdersValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalOrdersValue.Location = new System.Drawing.Point(120, 25);
             this.lblTotalOrdersValue.Name = "lblTotalOrdersValue";
             this.lblTotalOrdersValue.Size = new System.Drawing.Size(0, 16);
@@ -199,6 +215,7 @@
             this.groupBoxPersonalInfo.Controls.Add(this.lblCustomerIDValue);
             this.groupBoxPersonalInfo.Controls.Add(this.lblFirstNameValue);
             this.groupBoxPersonalInfo.Controls.Add(this.lblLastNameValue);
+            this.groupBoxPersonalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxPersonalInfo.Location = new System.Drawing.Point(12, 12);
             this.groupBoxPersonalInfo.Name = "groupBoxPersonalInfo";
             this.groupBoxPersonalInfo.Size = new System.Drawing.Size(570, 154);
@@ -214,6 +231,7 @@
             this.groupBoxContactDetails.Controls.Add(this.lblPhone);
             this.groupBoxContactDetails.Controls.Add(this.lblPhoneValue);
             this.groupBoxContactDetails.Controls.Add(this.lblEmailValue);
+            this.groupBoxContactDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxContactDetails.Location = new System.Drawing.Point(12, 172);
             this.groupBoxContactDetails.Name = "groupBoxContactDetails";
             this.groupBoxContactDetails.Size = new System.Drawing.Size(570, 148);
@@ -225,6 +243,7 @@
             // 
             this.groupBoxOrderDetails.Controls.Add(this.lblTotalOrders);
             this.groupBoxOrderDetails.Controls.Add(this.lblTotalOrdersValue);
+            this.groupBoxOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxOrderDetails.Location = new System.Drawing.Point(12, 336);
             this.groupBoxOrderDetails.Name = "groupBoxOrderDetails";
             this.groupBoxOrderDetails.Size = new System.Drawing.Size(570, 80);
@@ -250,7 +269,10 @@
             this.Controls.Add(this.groupBoxOrderDetails);
             this.Controls.Add(this.groupBoxContactDetails);
             this.Controls.Add(this.groupBoxPersonalInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CustomerDetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Details";
             this.groupBoxPersonalInfo.ResumeLayout(false);
             this.groupBoxPersonalInfo.PerformLayout();

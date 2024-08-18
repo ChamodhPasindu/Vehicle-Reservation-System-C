@@ -15,8 +15,8 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
     public partial class OrderManagementControl : UserControl
     {
         private GroupBox grpCarPartOrders;
-        private DataGridView dgvCarPartOrders;
         private GroupBox grpCarOrders;
+        private DataGridView dgvCarPartOrders;
         private DataGridView dgvCarOrders;
 
         string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
@@ -122,5 +122,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 orderCarPartDetailForm.ShowDialog();
             }
         }
+
+       
     }
 }

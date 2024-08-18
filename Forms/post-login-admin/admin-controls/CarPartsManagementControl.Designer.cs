@@ -96,6 +96,7 @@
             // lblPartName
             // 
             this.lblPartName.AutoSize = true;
+            this.lblPartName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartName.Location = new System.Drawing.Point(21, 31);
             this.lblPartName.Name = "lblPartName";
             this.lblPartName.Size = new System.Drawing.Size(71, 16);
@@ -105,6 +106,7 @@
             // lblPartNumber
             // 
             this.lblPartNumber.AutoSize = true;
+            this.lblPartNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartNumber.Location = new System.Drawing.Point(21, 61);
             this.lblPartNumber.Name = "lblPartNumber";
             this.lblPartNumber.Size = new System.Drawing.Size(82, 16);
@@ -114,6 +116,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(21, 91);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(38, 16);
@@ -146,6 +149,7 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.Location = new System.Drawing.Point(20, 121);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(55, 16);
@@ -155,6 +159,7 @@
             // groupBoxSearch
             // 
             this.groupBoxSearch.Controls.Add(this.txtSearch);
+            this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSearch.Location = new System.Drawing.Point(23, 174);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(386, 62);
@@ -165,6 +170,7 @@
             // groupBoxDescription
             // 
             this.groupBoxDescription.Controls.Add(this.txtDescription);
+            this.groupBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDescription.Location = new System.Drawing.Point(432, 11);
             this.groupBoxDescription.Name = "groupBoxDescription";
             this.groupBoxDescription.Size = new System.Drawing.Size(445, 156);
@@ -182,6 +188,7 @@
             this.groupBoxCarPartDetails.Controls.Add(this.lblQuantity);
             this.groupBoxCarPartDetails.Controls.Add(this.lblPartNumber);
             this.groupBoxCarPartDetails.Controls.Add(this.lblPrice);
+            this.groupBoxCarPartDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCarPartDetails.Location = new System.Drawing.Point(23, 11);
             this.groupBoxCarPartDetails.Name = "groupBoxCarPartDetails";
             this.groupBoxCarPartDetails.Size = new System.Drawing.Size(386, 156);
@@ -197,7 +204,7 @@
             this.Controls.Add(this.dataGridViewCarParts);
             this.Controls.Add(this.btnSave);
             this.Name = "CarPartsManagementControl";
-            this.Size = new System.Drawing.Size(901, 526);
+            this.Size = new System.Drawing.Size(900, 525);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarParts)).EndInit();
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();

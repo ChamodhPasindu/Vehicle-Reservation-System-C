@@ -117,7 +117,10 @@
             this.ClientSize = new System.Drawing.Size(1382, 653);
             this.Controls.Add(this.panelMainContent);
             this.Controls.Add(this.panelSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CustomerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Dashboard";
             this.panelSideMenu.ResumeLayout(false);
             this.ResumeLayout(false);

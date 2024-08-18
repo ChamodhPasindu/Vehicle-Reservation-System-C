@@ -70,6 +70,7 @@
             this.groupBoxOrderDetails.Controls.Add(this.lblOrderId);
             this.groupBoxOrderDetails.Controls.Add(this.lblOrderDate);
             this.groupBoxOrderDetails.Controls.Add(this.lblTotalAmount);
+            this.groupBoxOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxOrderDetails.Location = new System.Drawing.Point(20, 12);
             this.groupBoxOrderDetails.Name = "groupBoxOrderDetails";
             this.groupBoxOrderDetails.Size = new System.Drawing.Size(405, 147);
@@ -80,6 +81,7 @@
             // lblStaticAmount
             // 
             this.lblStaticAmount.AutoSize = true;
+            this.lblStaticAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStaticAmount.Location = new System.Drawing.Point(26, 113);
             this.lblStaticAmount.Name = "lblStaticAmount";
             this.lblStaticAmount.Size = new System.Drawing.Size(89, 16);
@@ -89,6 +91,7 @@
             // lblStaticOrderDate
             // 
             this.lblStaticOrderDate.AutoSize = true;
+            this.lblStaticOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStaticOrderDate.Location = new System.Drawing.Point(26, 73);
             this.lblStaticOrderDate.Name = "lblStaticOrderDate";
             this.lblStaticOrderDate.Size = new System.Drawing.Size(76, 16);
@@ -98,6 +101,7 @@
             // lblStaticOrderID
             // 
             this.lblStaticOrderID.AutoSize = true;
+            this.lblStaticOrderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStaticOrderID.Location = new System.Drawing.Point(26, 32);
             this.lblStaticOrderID.Name = "lblStaticOrderID";
             this.lblStaticOrderID.Size = new System.Drawing.Size(60, 16);
@@ -107,6 +111,7 @@
             // lblOrderId
             // 
             this.lblOrderId.AutoSize = true;
+            this.lblOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderId.Location = new System.Drawing.Point(125, 33);
             this.lblOrderId.Name = "lblOrderId";
             this.lblOrderId.Size = new System.Drawing.Size(0, 16);
@@ -115,6 +120,7 @@
             // lblOrderDate
             // 
             this.lblOrderDate.AutoSize = true;
+            this.lblOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderDate.Location = new System.Drawing.Point(125, 73);
             this.lblOrderDate.Name = "lblOrderDate";
             this.lblOrderDate.Size = new System.Drawing.Size(0, 16);
@@ -123,6 +129,7 @@
             // lblTotalAmount
             // 
             this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAmount.Location = new System.Drawing.Point(125, 113);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(0, 16);
@@ -136,7 +143,10 @@
             this.Controls.Add(this.groupBoxOrderDetails);
             this.Controls.Add(this.dgvCarParts);
             this.Controls.Add(this.btnClose);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "OrderCarPartDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Car Part Details";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarParts)).EndInit();
             this.groupBoxOrderDetails.ResumeLayout(false);

@@ -89,6 +89,7 @@
             this.groupBoxCarDetails.Controls.Add(this.txtYear);
             this.groupBoxCarDetails.Controls.Add(this.txtManufacturer);
             this.groupBoxCarDetails.Controls.Add(this.txtModel);
+            this.groupBoxCarDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCarDetails.Location = new System.Drawing.Point(17, 13);
             this.groupBoxCarDetails.Name = "groupBoxCarDetails";
             this.groupBoxCarDetails.Size = new System.Drawing.Size(386, 156);
@@ -99,6 +100,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(20, 119);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 16);
@@ -108,6 +110,7 @@
             // lblYear
             // 
             this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(19, 88);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(39, 16);
@@ -117,6 +120,7 @@
             // lblManufacturer
             // 
             this.lblManufacturer.AutoSize = true;
+            this.lblManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManufacturer.Location = new System.Drawing.Point(19, 59);
             this.lblManufacturer.Name = "lblManufacturer";
             this.lblManufacturer.Size = new System.Drawing.Size(87, 16);
@@ -126,6 +130,7 @@
             // lblModel
             // 
             this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(20, 32);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(48, 16);
@@ -163,6 +168,7 @@
             // groupBoxDescription
             // 
             this.groupBoxDescription.Controls.Add(this.txtDescription);
+            this.groupBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDescription.Location = new System.Drawing.Point(426, 13);
             this.groupBoxDescription.Name = "groupBoxDescription";
             this.groupBoxDescription.Size = new System.Drawing.Size(445, 156);
@@ -181,6 +187,7 @@
             // groupBoxSearch
             // 
             this.groupBoxSearch.Controls.Add(this.txtSearch);
+            this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSearch.Location = new System.Drawing.Point(17, 172);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(386, 62);
@@ -196,7 +203,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dataGridViewCars);
             this.Name = "CarManagementControl";
-            this.Size = new System.Drawing.Size(901, 526);
+            this.Size = new System.Drawing.Size(900, 525);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).EndInit();
             this.groupBoxCarDetails.ResumeLayout(false);
             this.groupBoxCarDetails.PerformLayout();

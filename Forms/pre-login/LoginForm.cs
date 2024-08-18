@@ -14,6 +14,8 @@ namespace ABCTradersApp
         private RadioButton radioCustomer;
         private RadioButton radioAdmin;
         private Button btnRegister;
+        private Label lblLogin;
+        private PictureBox LoginImage;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 

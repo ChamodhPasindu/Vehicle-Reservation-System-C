@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ABCTradersApp
 {
     public partial class RegisterForm : Form
     {
+        private PictureBox pictureBox1;
         public RegisterForm()
         {
             InitializeComponent();
@@ -21,6 +23,47 @@ namespace ABCTradersApp
             string email = txtEmail.Text;
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
+
+            if (string.IsNullOrEmpty(firstName))
+            {
+                MessageBox.Show("First Name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(lastName))
+            {
+                MessageBox.Show("Last Name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Username is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(nic))
+            {
+                MessageBox.Show("NIC is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Password is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(email) || !IsValidEmail(email))
+            {
+                MessageBox.Show("A valid Email is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(phone) || !IsValidPhoneNumber(phone))
+            {
+                MessageBox.Show("A valid Phone number is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(address))
+            {
+                MessageBox.Show("Address is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Insert into database
             string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
@@ -71,6 +114,25 @@ namespace ABCTradersApp
         {
             //close customer register window
             this.Close();
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mail = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // Helper method to validate phone number format (basic example)
+        private bool IsValidPhoneNumber(string phone)
+        {
+            return phone.All(char.IsDigit) && phone.Length >= 7 && phone.Length <= 15;
         }
     }
 }

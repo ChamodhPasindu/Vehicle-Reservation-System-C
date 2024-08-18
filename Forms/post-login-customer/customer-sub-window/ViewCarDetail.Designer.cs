@@ -76,6 +76,7 @@
             this.groupBoxCarDetails.Controls.Add(this.lblYear);
             this.groupBoxCarDetails.Controls.Add(this.lblManufacturer);
             this.groupBoxCarDetails.Controls.Add(this.lblModel);
+            this.groupBoxCarDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCarDetails.Location = new System.Drawing.Point(34, 23);
             this.groupBoxCarDetails.Name = "groupBoxCarDetails";
             this.groupBoxCarDetails.Size = new System.Drawing.Size(325, 254);
@@ -86,6 +87,7 @@
             // lblDescriptionValue
             // 
             this.lblDescriptionValue.AutoSize = true;
+            this.lblDescriptionValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescriptionValue.Location = new System.Drawing.Point(183, 200);
             this.lblDescriptionValue.Name = "lblDescriptionValue";
             this.lblDescriptionValue.Size = new System.Drawing.Size(50, 16);
@@ -95,6 +97,7 @@
             // lblPriceValue
             // 
             this.lblPriceValue.AutoSize = true;
+            this.lblPriceValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriceValue.Location = new System.Drawing.Point(183, 160);
             this.lblPriceValue.Name = "lblPriceValue";
             this.lblPriceValue.Size = new System.Drawing.Size(50, 16);
@@ -104,6 +107,7 @@
             // lblYearValue
             // 
             this.lblYearValue.AutoSize = true;
+            this.lblYearValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYearValue.Location = new System.Drawing.Point(183, 120);
             this.lblYearValue.Name = "lblYearValue";
             this.lblYearValue.Size = new System.Drawing.Size(50, 16);
@@ -113,6 +117,7 @@
             // lblManufacturerValue
             // 
             this.lblManufacturerValue.AutoSize = true;
+            this.lblManufacturerValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManufacturerValue.Location = new System.Drawing.Point(183, 80);
             this.lblManufacturerValue.Name = "lblManufacturerValue";
             this.lblManufacturerValue.Size = new System.Drawing.Size(50, 16);
@@ -122,6 +127,7 @@
             // lblModelValue
             // 
             this.lblModelValue.AutoSize = true;
+            this.lblModelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModelValue.Location = new System.Drawing.Point(183, 40);
             this.lblModelValue.Name = "lblModelValue";
             this.lblModelValue.Size = new System.Drawing.Size(50, 16);
@@ -131,6 +137,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.Location = new System.Drawing.Point(63, 200);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(78, 16);
@@ -140,6 +147,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(63, 160);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 16);
@@ -149,6 +157,7 @@
             // lblYear
             // 
             this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(63, 120);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(39, 16);
@@ -158,6 +167,7 @@
             // lblManufacturer
             // 
             this.lblManufacturer.AutoSize = true;
+            this.lblManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManufacturer.Location = new System.Drawing.Point(63, 80);
             this.lblManufacturer.Name = "lblManufacturer";
             this.lblManufacturer.Size = new System.Drawing.Size(87, 16);
@@ -167,6 +177,7 @@
             // lblModel
             // 
             this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(63, 40);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(48, 16);
@@ -179,7 +190,10 @@
             this.Controls.Add(this.groupBoxCarDetails);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOrder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "ViewCarDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Detail";
             this.groupBoxCarDetails.ResumeLayout(false);
             this.groupBoxCarDetails.PerformLayout();

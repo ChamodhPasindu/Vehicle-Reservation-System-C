@@ -61,6 +61,7 @@
             // groupBoxSearch
             // 
             this.groupBoxSearch.Controls.Add(this.txtSearch);
+            this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxSearch.Location = new System.Drawing.Point(20, 18);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Size = new System.Drawing.Size(386, 62);

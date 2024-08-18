@@ -103,9 +103,10 @@
             // 
             this.groupBoxCarParts.Controls.Add(this.lblTotalCarParts);
             this.groupBoxCarParts.Controls.Add(this.lblTotalCarPartsValue);
+            this.groupBoxCarParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCarParts.Location = new System.Drawing.Point(42, 46);
             this.groupBoxCarParts.Name = "groupBoxCarParts";
-            this.groupBoxCarParts.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxCarParts.Size = new System.Drawing.Size(343, 100);
             this.groupBoxCarParts.TabIndex = 6;
             this.groupBoxCarParts.TabStop = false;
             this.groupBoxCarParts.Text = "Total Car Parts";
@@ -114,9 +115,10 @@
             // 
             this.groupBoxCars.Controls.Add(this.lblTotalCars);
             this.groupBoxCars.Controls.Add(this.lblTotalCarsValue);
-            this.groupBoxCars.Location = new System.Drawing.Point(470, 46);
+            this.groupBoxCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCars.Location = new System.Drawing.Point(454, 46);
             this.groupBoxCars.Name = "groupBoxCars";
-            this.groupBoxCars.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxCars.Size = new System.Drawing.Size(326, 100);
             this.groupBoxCars.TabIndex = 7;
             this.groupBoxCars.TabStop = false;
             this.groupBoxCars.Text = "Total Cars";
@@ -125,9 +127,10 @@
             // 
             this.groupBoxOrders.Controls.Add(this.lblTotalOrders);
             this.groupBoxOrders.Controls.Add(this.lblTotalOrdersValue);
+            this.groupBoxOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxOrders.Location = new System.Drawing.Point(42, 180);
             this.groupBoxOrders.Name = "groupBoxOrders";
-            this.groupBoxOrders.Size = new System.Drawing.Size(389, 100);
+            this.groupBoxOrders.Size = new System.Drawing.Size(343, 100);
             this.groupBoxOrders.TabIndex = 8;
             this.groupBoxOrders.TabStop = false;
             this.groupBoxOrders.Text = "Total Orders";
@@ -138,7 +141,7 @@
             this.Controls.Add(this.groupBoxCars);
             this.Controls.Add(this.groupBoxCarParts);
             this.Name = "s";
-            this.Size = new System.Drawing.Size(901, 526);
+            this.Size = new System.Drawing.Size(850, 500);
             this.groupBoxCarParts.ResumeLayout(false);
             this.groupBoxCarParts.PerformLayout();
             this.groupBoxCars.ResumeLayout(false);

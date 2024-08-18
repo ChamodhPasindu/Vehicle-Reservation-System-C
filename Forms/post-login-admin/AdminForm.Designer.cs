@@ -143,7 +143,10 @@ namespace ABCTradersApp
             this.ClientSize = new System.Drawing.Size(1382, 653);
             this.Controls.Add(this.panelMainContent);
             this.Controls.Add(this.panelSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
             this.panelSideMenu.ResumeLayout(false);
             this.ResumeLayout(false);

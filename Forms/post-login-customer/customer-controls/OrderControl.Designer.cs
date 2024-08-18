@@ -36,6 +36,7 @@
             // grpCarOrders
             // 
             this.grpCarOrders.Controls.Add(this.dgvCarOrders);
+            this.grpCarOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCarOrders.Location = new System.Drawing.Point(54, 15);
             this.grpCarOrders.Margin = new System.Windows.Forms.Padding(4);
             this.grpCarOrders.Name = "grpCarOrders";
@@ -61,6 +62,7 @@
             // grpCarPartOrders
             // 
             this.grpCarPartOrders.Controls.Add(this.dgvCarPartOrders);
+            this.grpCarPartOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCarPartOrders.Location = new System.Drawing.Point(54, 236);
             this.grpCarPartOrders.Margin = new System.Windows.Forms.Padding(4);
             this.grpCarPartOrders.Name = "grpCarPartOrders";
