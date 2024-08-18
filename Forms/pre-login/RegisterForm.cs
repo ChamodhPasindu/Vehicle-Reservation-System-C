@@ -6,24 +6,6 @@ namespace ABCTradersApp
 {
     public partial class RegisterForm : Form
     {
-        private TextBox txtFirstName;
-        private TextBox txtLastName;
-        private TextBox txtUsername;
-        private TextBox txtNIC;
-        private TextBox txtPassword;
-        private TextBox txtEmail;
-        private TextBox txtPhone;
-        private TextBox txtAddress;
-        private Label lblFirstName;
-        private Label lblLastName;
-        private Label lblUsername;
-        private Label lblNIC;
-        private Label lblPassword;
-        private Label lblEmail;
-        private Label lblPhone;
-        private Label lblAddress;
-        private Button btnRegister;
-        private Button btnCancel;
         public RegisterForm()
         {
             InitializeComponent();

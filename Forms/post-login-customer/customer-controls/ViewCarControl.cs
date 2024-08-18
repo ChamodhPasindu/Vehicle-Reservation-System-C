@@ -35,9 +35,6 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
                     carGridView.DataSource = dataTable;
 
-                    // Set the columns to fill the full width of the DataGridView
-                    carGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
                     // Add "Edit" button column
                     if (!carGridView.Columns.Contains("View"))
                     {

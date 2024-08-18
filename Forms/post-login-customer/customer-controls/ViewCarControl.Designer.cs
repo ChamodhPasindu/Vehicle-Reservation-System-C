@@ -48,6 +48,7 @@
             // carGridView
             // 
             this.carGridView.AllowUserToAddRows = false;
+            this.carGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.carGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carGridView.Location = new System.Drawing.Point(20, 90);
             this.carGridView.Name = "carGridView";

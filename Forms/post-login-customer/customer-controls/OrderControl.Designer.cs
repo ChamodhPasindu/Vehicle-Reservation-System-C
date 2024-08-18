@@ -32,11 +32,6 @@
             this.dgvCarOrders = new System.Windows.Forms.DataGridView();
             this.grpCarPartOrders = new System.Windows.Forms.GroupBox();
             this.dgvCarPartOrders = new System.Windows.Forms.DataGridView();
-            this.grpCarOrders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarOrders)).BeginInit();
-            this.grpCarPartOrders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarPartOrders)).BeginInit();
-            this.SuspendLayout();
             // 
             // grpCarOrders
             // 

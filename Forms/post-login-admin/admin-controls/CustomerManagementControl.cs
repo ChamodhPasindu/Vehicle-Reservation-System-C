@@ -37,9 +37,6 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     adapter.Fill(dataTable);
                     dataGridViewCustomers.DataSource = dataTable;
 
-                    // Set the columns to fill the full width of the DataGridView
-                    dataGridViewCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
                     if (!dataGridViewCustomers.Columns.Contains("View"))
                     {
                         DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn

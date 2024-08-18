@@ -33,7 +33,8 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.radioCustomer = new System.Windows.Forms.RadioButton();
+            this.radioAdmin = new System.Windows.Forms.RadioButton();
             this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,18 +81,28 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // cmbRole
+            // radioCustomer
             // 
-            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRole.Items.AddRange(new object[] {
-            "Customer",
-            "Admin"});
-            this.cmbRole.Location = new System.Drawing.Point(90, 252);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(234, 24);
-            this.cmbRole.TabIndex = 5;
-            //set customer as default in combo
-            this.cmbRole.SelectedIndex = 0;
+            this.radioCustomer.AutoSize = true;
+            this.radioCustomer.Checked = true;
+            this.radioCustomer.Location = new System.Drawing.Point(90, 252);
+            this.radioCustomer.Name = "radioCustomer";
+            this.radioCustomer.Size = new System.Drawing.Size(85, 20);
+            this.radioCustomer.TabIndex = 5;
+            this.radioCustomer.TabStop = true;
+            this.radioCustomer.Text = "Customer";
+            this.radioCustomer.UseVisualStyleBackColor = true;
+            // 
+            // radioAdmin
+            // 
+            this.radioAdmin.AutoSize = true;
+            this.radioAdmin.Location = new System.Drawing.Point(258, 252);
+            this.radioAdmin.Name = "radioAdmin";
+            this.radioAdmin.Size = new System.Drawing.Size(66, 20);
+            this.radioAdmin.TabIndex = 6;
+            this.radioAdmin.TabStop = true;
+            this.radioAdmin.Text = "Admin";
+            this.radioAdmin.UseVisualStyleBackColor = true;
             // 
             // btnRegister
             // 
@@ -103,11 +114,12 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
-            // Login
+            // LoginForm
             // 
             this.ClientSize = new System.Drawing.Size(430, 563);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.cmbRole);
+            this.Controls.Add(this.radioAdmin);
+            this.Controls.Add(this.radioCustomer);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);

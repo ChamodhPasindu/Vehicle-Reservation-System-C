@@ -39,7 +39,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM Car";
+                    string query = "SELECT c.CarID, c.Model, c.Manufacturer, c.Year, c.Price  FROM Car c LEFT JOIN CustomerOrder co ON c.CarID = co.CarID WHERE co.CarID IS NULL OR co.Status != 'Ordered'";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);

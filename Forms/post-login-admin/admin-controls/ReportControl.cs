@@ -62,7 +62,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private void BtnExportToPDF_Click(object sender, EventArgs e)
         {
             // Validate that dgvReportData has data
-            if (dgvReportData.Rows.Count == 1)
+            if (dgvReportData.Rows.Count == 0)
             {
                 MessageBox.Show("No data available to generate the report.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

@@ -49,8 +49,9 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // dataGridViewCustomers
             // 
             this.dataGridViewCustomers.AllowUserToAddRows = false;
+            this.dataGridViewCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomers.Location = new System.Drawing.Point(20, 82);
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(20, 92);
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
             this.dataGridViewCustomers.RowHeadersWidth = 51;
             this.dataGridViewCustomers.RowTemplate.Height = 24;

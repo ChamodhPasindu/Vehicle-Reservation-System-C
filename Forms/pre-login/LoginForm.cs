@@ -11,7 +11,8 @@ namespace ABCTradersApp
         private TextBox txtUsername;
         private TextBox txtPassword;
         private Button btnLogin;
-        private ComboBox cmbRole;
+        private RadioButton radioCustomer;
+        private RadioButton radioAdmin;
         private Button btnRegister;
 
         private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
@@ -25,9 +26,8 @@ namespace ABCTradersApp
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            string role = cmbRole.SelectedItem.ToString();
 
-            if (role == "Admin")
+            if (radioAdmin.Checked)
             {
                 if (ValidateAdminLogin(username, password))
                 {
@@ -44,7 +44,7 @@ namespace ABCTradersApp
                 }
                 
             }
-            else if (role == "Customer")
+            else if (radioCustomer.Checked)
             {
                 int customerID = ValidateCustomerLogin(username, password);
                 if (customerID != -1)

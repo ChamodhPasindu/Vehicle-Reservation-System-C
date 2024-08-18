@@ -133,6 +133,7 @@
             // dataGridViewCarParts
             // 
             this.dataGridViewCarParts.AllowUserToAddRows = false;
+            this.dataGridViewCarParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCarParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCarParts.Location = new System.Drawing.Point(23, 244);
             this.dataGridViewCarParts.Name = "dataGridViewCarParts";
