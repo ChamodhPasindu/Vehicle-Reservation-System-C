@@ -85,6 +85,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             // dgvReportData
             // 
+            this.dgvReportData.AllowUserToAddRows = false;
             this.dgvReportData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReportData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReportData.Location = new System.Drawing.Point(12, 132);
@@ -128,7 +129,6 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.groupBoxFilter.PerformLayout();
             this.ResumeLayout(false);
             #endregion
-
         }
     }
 }

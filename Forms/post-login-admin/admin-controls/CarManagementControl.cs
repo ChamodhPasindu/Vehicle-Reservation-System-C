@@ -171,83 +171,89 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void AddNewCar()
         {
-            string model = txtModel.Text;
-            string manufacturer = txtManufacturer.Text;
-            int year = int.Parse(txtYear.Text);
-            decimal price = decimal.Parse(txtPrice.Text);
-            string description = txtDescription.Text;
-
-            try
+            if (ValidateInput())
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "INSERT INTO Car (Model, Manufacturer, Year, Price, Description) VALUES (@Model, @Manufacturer, @Year, @Price, @Description)";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Model", model);
-                    command.Parameters.AddWithValue("@Manufacturer", manufacturer);
-                    command.Parameters.AddWithValue("@Year", year);
-                    command.Parameters.AddWithValue("@Price", price);
-                    command.Parameters.AddWithValue("@Description", description);
+                string model = txtModel.Text;
+                string manufacturer = txtManufacturer.Text;
+                int year = int.Parse(txtYear.Text);
+                decimal price = decimal.Parse(txtPrice.Text);
+                string description = txtDescription.Text;
 
-                    connection.Open();
-                    int row = command.ExecuteNonQuery();
-                    if (row > 0)
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        MessageBox.Show("Car added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string query = "INSERT INTO Car (Model, Manufacturer, Year, Price, Description) VALUES (@Model, @Manufacturer, @Year, @Price, @Description)";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Model", model);
+                        command.Parameters.AddWithValue("@Manufacturer", manufacturer);
+                        command.Parameters.AddWithValue("@Year", year);
+                        command.Parameters.AddWithValue("@Price", price);
+                        command.Parameters.AddWithValue("@Description", description);
+
+                        connection.Open();
+                        int row = command.ExecuteNonQuery();
+                        if (row > 0)
+                        {
+                            MessageBox.Show("Car added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            ClearTextFields(); // Clear fields after adding a new car
+                ClearTextFields(); // Clear fields after adding a new car
+            }
         }
 
         private void UpdateCar(int carID)
         {
-            string model = txtModel.Text;
-            string manufacturer = txtManufacturer.Text;
-            int year = int.Parse(txtYear.Text);
-            decimal price = decimal.Parse(txtPrice.Text);
-            string description = txtDescription.Text;
-
-            try
+            if (ValidateInput())
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "UPDATE Car SET Model = @Model, Manufacturer = @Manufacturer, Year = @Year, Price = @Price, Description = @Description WHERE CarID = @CarID";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Model", model);
-                    command.Parameters.AddWithValue("@Manufacturer", manufacturer);
-                    command.Parameters.AddWithValue("@Year", year);
-                    command.Parameters.AddWithValue("@Price", price);
-                    command.Parameters.AddWithValue("@Description", description);
-                    command.Parameters.AddWithValue("@CarID", carID);
+                string model = txtModel.Text;
+                string manufacturer = txtManufacturer.Text;
+                int year = int.Parse(txtYear.Text);
+                decimal price = decimal.Parse(txtPrice.Text);
+                string description = txtDescription.Text;
 
-                    connection.Open();
-                    int rows = command.ExecuteNonQuery();
-                    if (rows > 0)
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        MessageBox.Show("Car Updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string query = "UPDATE Car SET Model = @Model, Manufacturer = @Manufacturer, Year = @Year, Price = @Price, Description = @Description WHERE CarID = @CarID";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Model", model);
+                        command.Parameters.AddWithValue("@Manufacturer", manufacturer);
+                        command.Parameters.AddWithValue("@Year", year);
+                        command.Parameters.AddWithValue("@Price", price);
+                        command.Parameters.AddWithValue("@Description", description);
+                        command.Parameters.AddWithValue("@CarID", carID);
+
+                        connection.Open();
+                        int rows = command.ExecuteNonQuery();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Car Updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            ClearTextFields(); // Clear fields after editing a car
+                ClearTextFields(); // Clear fields after editing a car
+            }
         }
 
         private void DeleteCar(int carID)
@@ -289,6 +295,37 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             txtDescription.Clear();
             editCarID = null; // Reset edit mode
             btnSave.Text = "Save"; // Reset button text to "Save"
+        }
+
+        private bool ValidateInput()
+        {
+            string model = txtModel.Text;
+            string manufacturer = txtManufacturer.Text;
+            string yearText = txtYear.Text;
+            string priceText = txtPrice.Text;
+            string description = txtDescription.Text;
+
+            // Validate inputs
+            if (string.IsNullOrWhiteSpace(model) || string.IsNullOrWhiteSpace(manufacturer) ||
+                string.IsNullOrWhiteSpace(yearText) || string.IsNullOrWhiteSpace(priceText) ||
+                string.IsNullOrWhiteSpace(description))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false; ;
+            }
+
+            if (!int.TryParse(yearText, out int year))
+            {
+                MessageBox.Show("Year must be a valid number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false; ;
+            }
+
+            if (!decimal.TryParse(priceText, out decimal price))
+            {
+                MessageBox.Show("Price must be a valid decimal number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

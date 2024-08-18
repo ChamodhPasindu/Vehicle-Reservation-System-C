@@ -32,7 +32,11 @@
             this.dgvCarPartOrders = new System.Windows.Forms.DataGridView();
             this.grpCarOrders = new System.Windows.Forms.GroupBox();
             this.dgvCarOrders = new System.Windows.Forms.DataGridView();
-            
+            this.grpCarPartOrders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarPartOrders)).BeginInit();
+            this.grpCarOrders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarOrders)).BeginInit();
+            this.SuspendLayout();
             // 
             // grpCarPartOrders
             // 
@@ -48,6 +52,7 @@
             // 
             // dgvCarPartOrders
             // 
+            this.dgvCarPartOrders.AllowUserToAddRows = false;
             this.dgvCarPartOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarPartOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarPartOrders.Location = new System.Drawing.Point(8, 23);
@@ -72,6 +77,7 @@
             // 
             // dgvCarOrders
             // 
+            this.dgvCarOrders.AllowUserToAddRows = false;
             this.dgvCarOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarOrders.Location = new System.Drawing.Point(8, 23);

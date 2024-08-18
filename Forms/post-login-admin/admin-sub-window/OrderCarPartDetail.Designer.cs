@@ -247,6 +247,7 @@
             // 
             // dgvCarParts
             // 
+            this.dgvCarParts.AllowUserToAddRows = false;
             this.dgvCarParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarParts.Location = new System.Drawing.Point(18, 30);

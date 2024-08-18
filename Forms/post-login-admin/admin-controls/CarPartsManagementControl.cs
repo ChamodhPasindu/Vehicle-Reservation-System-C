@@ -189,84 +189,94 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void AddNewCarPart()
         {
-            string partName = txtPartName.Text;
-            string partNumber = txtPartNumber.Text;
-            decimal price = decimal.Parse(txtPrice.Text);
-            string description = txtDescription.Text;
-            int qty= int.Parse(txtQuatity.Text);
-
-            try
+            //validate inputh with null check and number format check
+            if (ValidateInput())
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "INSERT INTO CarPart (PartName, PartNumber, Price, Description,Quantity) VALUES (@PartName, @PartNumber, @Price, @Description ,@Quantity )";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@PartName", partName);
-                    command.Parameters.AddWithValue("@PartNumber", partNumber);
-                    command.Parameters.AddWithValue("@Price", price);
-                    command.Parameters.AddWithValue("@Description", description);
-                    command.Parameters.AddWithValue("@Quantity", qty);
+                string partName = txtPartName.Text;
+                string partNumber = txtPartNumber.Text;
+                decimal price = decimal.Parse(txtPrice.Text);
+                string description = txtDescription.Text;
+                int qty = int.Parse(txtQuatity.Text);
 
-                    connection.Open();
-                    int rows = command.ExecuteNonQuery();
-                    if (rows > 0)
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        MessageBox.Show("Car Part added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string query = "INSERT INTO CarPart (PartName, PartNumber, Price, Description,Quantity) VALUES (@PartName, @PartNumber, @Price, @Description ,@Quantity )";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@PartName", partName);
+                        command.Parameters.AddWithValue("@PartNumber", partNumber);
+                        command.Parameters.AddWithValue("@Price", price);
+                        command.Parameters.AddWithValue("@Description", description);
+                        command.Parameters.AddWithValue("@Quantity", qty);
+
+                        connection.Open();
+                        int rows = command.ExecuteNonQuery();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Car Part added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            ClearTextFields();
+                ClearTextFields();
+            }
+           
         }
 
         private void UpdateCarPart(int carPartID)
         {
-            string partName = txtPartName.Text;
-            string partNumber = txtPartNumber.Text;
-            decimal price = decimal.Parse(txtPrice.Text);
-            string description = txtDescription.Text;
-            int qty = int.Parse(txtQuatity.Text);
-
-
-            try
+            //validate inputh with null check and number format check
+            if (ValidateInput())
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "UPDATE CarPart SET PartName = @PartName, PartNumber = @PartNumber, Price = @Price, Description = @Description, Quantity = @Quantity WHERE CarPartID = @PartID";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@PartName", partName);
-                    command.Parameters.AddWithValue("@PartNumber", partNumber);
-                    command.Parameters.AddWithValue("@Price", price);
-                    command.Parameters.AddWithValue("@Description", description);
-                    command.Parameters.AddWithValue("@Quantity", qty);
-                    command.Parameters.AddWithValue("@PartID", carPartID);
+                string partName = txtPartName.Text;
+                string partNumber = txtPartNumber.Text;
+                decimal price = decimal.Parse(txtPrice.Text);
+                string description = txtDescription.Text;
+                int qty = int.Parse(txtQuatity.Text);
 
-                    connection.Open();
-                    int rows = command.ExecuteNonQuery();
-                    if (rows > 0)
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        MessageBox.Show("Car Part Updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string query = "UPDATE CarPart SET PartName = @PartName, PartNumber = @PartNumber, Price = @Price, Description = @Description, Quantity = @Quantity WHERE CarPartID = @PartID";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@PartName", partName);
+                        command.Parameters.AddWithValue("@PartNumber", partNumber);
+                        command.Parameters.AddWithValue("@Price", price);
+                        command.Parameters.AddWithValue("@Description", description);
+                        command.Parameters.AddWithValue("@Quantity", qty);
+                        command.Parameters.AddWithValue("@PartID", carPartID);
+
+                        connection.Open();
+                        int rows = command.ExecuteNonQuery();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Car Part Updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch (SqlException sqlEx)
-            {
-                MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            ClearTextFields();
+                ClearTextFields();
+            }
+            
         }
 
         private void DeleteCarPart(int carPartID)
@@ -299,6 +309,38 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private bool ValidateInput()
+        {
+            string partName = txtPartName.Text;
+            string partNumber = txtPartNumber.Text;
+            string priceText = txtPrice.Text;
+            string description = txtDescription.Text;
+            string qtyText = txtQuatity.Text;
+
+            // Validate inputs
+            if (string.IsNullOrWhiteSpace(partName) || string.IsNullOrWhiteSpace(partNumber) ||
+                string.IsNullOrWhiteSpace(priceText) || string.IsNullOrWhiteSpace(description) ||
+                string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("All fields must be filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!decimal.TryParse(priceText, out decimal price))
+            {
+                MessageBox.Show("Price must be a valid decimal number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!int.TryParse(qtyText, out int qty))
+            {
+                MessageBox.Show("Quantity must be a valid integer.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         private void ClearTextFields()
