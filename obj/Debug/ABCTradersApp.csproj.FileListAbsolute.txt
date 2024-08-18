@@ -84,7 +84,6 @@ D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.adm
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.DashboardControl.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.CustomerDetailForm.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.CustomerManagementControl.resources
-D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.DashboardControl.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.ViewCarControl.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.ViewCarDetail.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.ViewCarPartControl.resources
@@ -95,3 +94,8 @@ D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.adm
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.OrderCarDetail.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.OrderCarPartDetail.resources
 D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_admin.admin_controls.ReportControl.resources
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\itextsharp.dll
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Others\TOPUP\ABCTradersApp\bin\Debug\itextsharp.xml
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.s.resources
