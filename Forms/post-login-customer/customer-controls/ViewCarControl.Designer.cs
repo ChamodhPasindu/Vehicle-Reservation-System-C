@@ -54,7 +54,7 @@
             this.carGridView.Name = "carGridView";
             this.carGridView.RowHeadersWidth = 51;
             this.carGridView.RowTemplate.Height = 24;
-            this.carGridView.Size = new System.Drawing.Size(800, 385);
+            this.carGridView.Size = new System.Drawing.Size(849, 385);
             this.carGridView.TabIndex = 1;
             this.carGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CarGridView_CellClick);
             // 
@@ -74,7 +74,7 @@
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.carGridView);
             this.Name = "ViewCarControl";
-            this.Size = new System.Drawing.Size(850, 500);
+            this.Size = new System.Drawing.Size(900, 525);
             ((System.ComponentModel.ISupportInitialize)(this.carGridView)).EndInit();
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();

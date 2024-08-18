@@ -176,7 +176,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.groupBoxOrderDetails.Controls.Add(this.txtOrderQuantity);
             this.groupBoxOrderDetails.Controls.Add(this.btnAddToCart);
             this.groupBoxOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxOrderDetails.Location = new System.Drawing.Point(68, 16);
+            this.groupBoxOrderDetails.Location = new System.Drawing.Point(58, 16);
             this.groupBoxOrderDetails.Name = "groupBoxOrderDetails";
             this.groupBoxOrderDetails.Size = new System.Drawing.Size(348, 244);
             this.groupBoxOrderDetails.TabIndex = 15;
@@ -190,9 +190,9 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.groupBoxCarParts.Controls.Add(this.cartGridView);
             this.groupBoxCarParts.Controls.Add(this.btnOrder);
             this.groupBoxCarParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCarParts.Location = new System.Drawing.Point(68, 266);
+            this.groupBoxCarParts.Location = new System.Drawing.Point(58, 266);
             this.groupBoxCarParts.Name = "groupBoxCarParts";
-            this.groupBoxCarParts.Size = new System.Drawing.Size(750, 216);
+            this.groupBoxCarParts.Size = new System.Drawing.Size(795, 216);
             this.groupBoxCarParts.TabIndex = 15;
             this.groupBoxCarParts.TabStop = false;
             this.groupBoxCarParts.Text = "Car Parts";
@@ -231,7 +231,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.cartGridView.Name = "cartGridView";
             this.cartGridView.ReadOnly = true;
             this.cartGridView.RowHeadersWidth = 51;
-            this.cartGridView.Size = new System.Drawing.Size(716, 150);
+            this.cartGridView.Size = new System.Drawing.Size(758, 150);
             this.cartGridView.TabIndex = 12;
             // 
             // PartName
@@ -272,7 +272,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Location = new System.Drawing.Point(530, 185);
+            this.btnOrder.Location = new System.Drawing.Point(572, 185);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(200, 23);
             this.btnOrder.TabIndex = 11;
@@ -285,7 +285,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
             this.Controls.Add(this.groupBoxCarParts);
             this.Controls.Add(this.groupBoxOrderDetails);
             this.Name = "ViewCarPartControl";
-            this.Size = new System.Drawing.Size(850, 500);
+            this.Size = new System.Drawing.Size(900, 525);
             this.groupBoxOrderDetails.ResumeLayout(false);
             this.groupBoxOrderDetails.PerformLayout();
             this.groupBoxCarParts.ResumeLayout(false);

@@ -93,16 +93,16 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.dgvReportData.AllowUserToAddRows = false;
             this.dgvReportData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReportData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReportData.Location = new System.Drawing.Point(12, 132);
+            this.dgvReportData.Location = new System.Drawing.Point(33, 145);
             this.dgvReportData.Name = "dgvReportData";
             this.dgvReportData.RowHeadersWidth = 51;
-            this.dgvReportData.Size = new System.Drawing.Size(776, 340);
+            this.dgvReportData.Size = new System.Drawing.Size(831, 340);
             this.dgvReportData.TabIndex = 5;
             // 
             // btnExportToPDF
             // 
             this.btnExportToPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportToPDF.Location = new System.Drawing.Point(620, 51);
+            this.btnExportToPDF.Location = new System.Drawing.Point(666, 51);
             this.btnExportToPDF.Name = "btnExportToPDF";
             this.btnExportToPDF.Size = new System.Drawing.Size(150, 30);
             this.btnExportToPDF.TabIndex = 6;
@@ -118,9 +118,9 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.groupBoxFilter.Controls.Add(this.lblFromDate);
             this.groupBoxFilter.Controls.Add(this.dtpToDate);
             this.groupBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxFilter.Location = new System.Drawing.Point(12, 14);
+            this.groupBoxFilter.Location = new System.Drawing.Point(33, 27);
             this.groupBoxFilter.Name = "groupBoxFilter";
-            this.groupBoxFilter.Size = new System.Drawing.Size(776, 97);
+            this.groupBoxFilter.Size = new System.Drawing.Size(831, 97);
             this.groupBoxFilter.TabIndex = 7;
             this.groupBoxFilter.TabStop = false;
             this.groupBoxFilter.Text = "Filter";
@@ -130,7 +130,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.Controls.Add(this.groupBoxFilter);
             this.Controls.Add(this.dgvReportData);
             this.Name = "ReportControl";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(900, 525);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportData)).EndInit();
             this.groupBoxFilter.ResumeLayout(false);
             this.groupBoxFilter.PerformLayout();

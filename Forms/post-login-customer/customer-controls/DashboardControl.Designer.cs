@@ -116,7 +116,7 @@
             this.groupBoxCars.Controls.Add(this.lblTotalCars);
             this.groupBoxCars.Controls.Add(this.lblTotalCarsValue);
             this.groupBoxCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCars.Location = new System.Drawing.Point(454, 46);
+            this.groupBoxCars.Location = new System.Drawing.Point(495, 46);
             this.groupBoxCars.Name = "groupBoxCars";
             this.groupBoxCars.Size = new System.Drawing.Size(326, 100);
             this.groupBoxCars.TabIndex = 7;
@@ -141,7 +141,7 @@
             this.Controls.Add(this.groupBoxCars);
             this.Controls.Add(this.groupBoxCarParts);
             this.Name = "s";
-            this.Size = new System.Drawing.Size(850, 500);
+            this.Size = new System.Drawing.Size(900, 525);
             this.groupBoxCarParts.ResumeLayout(false);
             this.groupBoxCarParts.PerformLayout();
             this.groupBoxCars.ResumeLayout(false);

@@ -165,6 +165,20 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
+            // Validate that the cart is not empty
+            if (cartGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Your cart is empty. Please add items to your cart before placing an order.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validate that total amount is greater than 0
+            if (string.IsNullOrWhiteSpace(lblTotalValue.Text) || Convert.ToDecimal(lblTotalValue.Text) <= 0)
+            {
+                MessageBox.Show("The total amount must be greater than zero.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

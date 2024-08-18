@@ -51,11 +51,11 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.dataGridViewCustomers.AllowUserToAddRows = false;
             this.dataGridViewCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomers.Location = new System.Drawing.Point(20, 92);
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(27, 100);
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
             this.dataGridViewCustomers.RowHeadersWidth = 51;
             this.dataGridViewCustomers.RowTemplate.Height = 24;
-            this.dataGridViewCustomers.Size = new System.Drawing.Size(800, 378);
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(840, 378);
             this.dataGridViewCustomers.TabIndex = 1;
             this.dataGridViewCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCustomers_CellClick);
             // 
@@ -63,9 +63,9 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             // 
             this.groupBoxSearch.Controls.Add(this.txtSearch);
             this.groupBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSearch.Location = new System.Drawing.Point(20, 10);
+            this.groupBoxSearch.Location = new System.Drawing.Point(27, 18);
             this.groupBoxSearch.Name = "groupBoxSearch";
-            this.groupBoxSearch.Size = new System.Drawing.Size(386, 62);
+            this.groupBoxSearch.Size = new System.Drawing.Size(426, 62);
             this.groupBoxSearch.TabIndex = 20;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Search";
@@ -75,7 +75,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.dataGridViewCustomers);
             this.Name = "CustomerManagementControl";
-            this.Size = new System.Drawing.Size(850, 500);
+            this.Size = new System.Drawing.Size(900, 525);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
