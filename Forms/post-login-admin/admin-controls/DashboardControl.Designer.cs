@@ -37,10 +37,13 @@
             this.groupBoxCarParts = new System.Windows.Forms.GroupBox();
             this.groupBoxOrders = new System.Windows.Forms.GroupBox();
             this.lblDashboard = new System.Windows.Forms.Label();
+            this.groupBoxAvailableCar = new System.Windows.Forms.GroupBox();
+            this.lblAvailableCars = new System.Windows.Forms.Label();
             this.groupBoxCustomers.SuspendLayout();
             this.groupBoxCars.SuspendLayout();
             this.groupBoxCarParts.SuspendLayout();
             this.groupBoxOrders.SuspendLayout();
+            this.groupBoxAvailableCar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCustomersCount
@@ -137,8 +140,30 @@
             this.lblDashboard.TabIndex = 8;
             this.lblDashboard.Text = "Dashboard";
             // 
+            // groupBoxAvailableCar
+            // 
+            this.groupBoxAvailableCar.Controls.Add(this.lblAvailableCars);
+            this.groupBoxAvailableCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAvailableCar.Location = new System.Drawing.Point(54, 389);
+            this.groupBoxAvailableCar.Name = "groupBoxAvailableCar";
+            this.groupBoxAvailableCar.Size = new System.Drawing.Size(321, 100);
+            this.groupBoxAvailableCar.TabIndex = 7;
+            this.groupBoxAvailableCar.TabStop = false;
+            this.groupBoxAvailableCar.Text = "Total Available Cars";
+            // 
+            // lblAvailableCars
+            // 
+            this.lblAvailableCars.AutoSize = true;
+            this.lblAvailableCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAvailableCars.Location = new System.Drawing.Point(18, 49);
+            this.lblAvailableCars.Name = "lblAvailableCars";
+            this.lblAvailableCars.Size = new System.Drawing.Size(205, 20);
+            this.lblAvailableCars.TabIndex = 2;
+            this.lblAvailableCars.Text = "Number of Available Cars:";
+            // 
             // DashboardControl
             // 
+            this.Controls.Add(this.groupBoxAvailableCar);
             this.Controls.Add(this.lblDashboard);
             this.Controls.Add(this.groupBoxOrders);
             this.Controls.Add(this.groupBoxCarParts);
@@ -154,6 +179,8 @@
             this.groupBoxCarParts.PerformLayout();
             this.groupBoxOrders.ResumeLayout(false);
             this.groupBoxOrders.PerformLayout();
+            this.groupBoxAvailableCar.ResumeLayout(false);
+            this.groupBoxAvailableCar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +189,5 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDashboard;
     }
 }

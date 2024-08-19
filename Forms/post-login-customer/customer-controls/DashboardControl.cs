@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 {
-    public partial class s : UserControl
+    public partial class DashboardControl : UserControl
     {
 
         private Label lblTotalCarParts;
@@ -13,16 +14,16 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private Label lblTotalCarPartsValue;
         private Label lblTotalCarsValue;
         private Label lblTotalOrdersValue;
+        private Label lblDashboard;
         private GroupBox groupBoxCarParts;
         private GroupBox groupBoxCars;
         private GroupBox groupBoxOrders;
 
         private int customerID;
+        private string connectionString = DatabaseConfig.ConnectionString;
 
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
-
-        public s(int customerID)
+        public DashboardControl(int customerID)
         {
             InitializeComponent();
             this.customerID = customerID;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
@@ -15,9 +16,11 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private GroupBox groupBoxCars;
         private GroupBox groupBoxCarParts;
         private GroupBox groupBoxOrders;
+        private Label lblDashboard;
+        private GroupBox groupBoxAvailableCar;
+        private Label lblAvailableCars;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
-
+        private string connectionString = DatabaseConfig.ConnectionString;
 
         public DashboardControl()
         {
@@ -42,6 +45,11 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     SqlCommand cmdCars = new SqlCommand("SELECT COUNT(*) FROM Car", connection);
                     int carsCount = (int)cmdCars.ExecuteScalar();
                     lblCarsCount.Text = $"Number of Cars: {carsCount}";
+
+                    // Number Avaiable of Cars
+                    SqlCommand cmdAvailableCars = new SqlCommand("SELECT COUNT(*) FROM Car c LEFT JOIN CustomerOrder co ON c.CarID = co.CarID WHERE co.CarID IS NULL OR co.Status != 'Ordered'", connection);
+                    int avialleCarsCount = (int)cmdAvailableCars.ExecuteScalar();
+                    lblAvailableCars.Text = $"Number of Available Cars: {avialleCarsCount}";
 
                     // Number of Car Parts
                     SqlCommand cmdCarParts = new SqlCommand("SELECT COUNT(*) FROM CarPart", connection);

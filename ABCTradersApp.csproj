@@ -195,6 +195,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ABCTradersDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="forms\DatabaseConfig.cs" />
     <Compile Include="forms\post-login-admin\admin-controls\CarManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

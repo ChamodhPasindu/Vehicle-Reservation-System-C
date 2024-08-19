@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
@@ -24,7 +25,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private TextBox txtDescription;
         private GroupBox groupBoxSearch;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+        private string connectionString = DatabaseConfig.ConnectionString;
         private int? editCarID = null;
 
         public CarManagementControl()

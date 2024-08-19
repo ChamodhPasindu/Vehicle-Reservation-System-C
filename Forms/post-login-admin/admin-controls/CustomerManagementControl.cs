@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
@@ -17,8 +12,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private DataGridView dataGridViewCustomers;
         private GroupBox groupBoxSearch;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
-
+        private string connectionString = DatabaseConfig.ConnectionString;
         public CustomerManagementControl()
         {
             InitializeComponent();

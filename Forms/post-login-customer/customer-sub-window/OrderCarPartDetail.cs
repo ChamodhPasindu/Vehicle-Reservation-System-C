@@ -2,14 +2,15 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 {
     public partial class OrderCarPartDetail : Form
     {
         private int orderID;
+        private string connectionString = DatabaseConfig.ConnectionString;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
         private DataGridView dgvCarParts;
         private Button btnClose;
         private GroupBox groupBoxOrderDetails;

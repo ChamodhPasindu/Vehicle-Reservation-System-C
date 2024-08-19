@@ -1,6 +1,6 @@
 ﻿namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 {
-    partial class s
+    partial class DashboardControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -168,6 +168,5 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDashboard;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp
 {
@@ -17,7 +18,7 @@ namespace ABCTradersApp
         private Label lblLogin;
         private PictureBox LoginImage;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+        private string connectionString = DatabaseConfig.ConnectionString;
 
         public LoginForm()
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 {
@@ -22,7 +23,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
         private Label lblManufacturer;
         private Label lblModel;
 
-        private string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+        private string connectionString = DatabaseConfig.ConnectionString;
 
 
         public ViewCarDetail(int carID, int customerID)

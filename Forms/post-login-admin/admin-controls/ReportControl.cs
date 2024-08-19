@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 {
@@ -18,9 +19,11 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         private Label lblToDate;
         private DataGridView dgvReportData;
         private GroupBox groupBoxFilter;
+        private Button btnCustomerReport;
+        private Button btnCarPartReport;
+        private Button btnCarReport;
 
-
-        string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
+        private string connectionString = DatabaseConfig.ConnectionString;
 
         public ReportControl()
         {
@@ -71,7 +74,8 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Filter = "PDF Files|*.pdf",
-                Title = "Save Report as PDF"
+                Title = "Save Report as PDF",
+                FileName = "OrderReport"
             };
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -115,6 +119,104 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 {
                     MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void BtnCustomerReport_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Customer";
+            GeneratePDFReport(query, "CustomerReport.pdf");
+        }
+
+        private void BtnCarPartReport_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM CarPart";
+            GeneratePDFReport(query, "CarPartReport.pdf");
+        }
+
+        private void BtnCarReport_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM Car";
+            GeneratePDFReport(query, "CarReport.pdf");
+        }
+
+        private void GeneratePDFReport(string query, string defaultFileName)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                SaveFileDialog saveFileDialog = new SaveFileDialog
+                                {
+                                    Filter = "PDF files (*.pdf)|*.pdf",
+                                    Title = "Save report as PDF",
+                                    FileName = defaultFileName
+                                };
+
+                                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                                {
+                                    ExportDataToPDF(reader, saveFileDialog.FileName);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No data found for the report.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error generating report: " + ex.Message);
+            }
+        }
+
+        private void ExportDataToPDF(SqlDataReader reader, string filePath)
+        {
+            try
+            {
+                using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+
+                    PdfPTable pdfTable = new PdfPTable(reader.FieldCount);
+                    pdfTable.WidthPercentage = 100;
+
+                    // Add headers
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        PdfPCell cell = new PdfPCell(new Phrase(reader.GetName(i)));
+                        pdfTable.AddCell(cell);
+                    }
+
+                    // Add rows
+                    while (reader.Read())
+                    {
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            pdfTable.AddCell(reader[i].ToString());
+                        }
+                    }
+
+                    pdfDoc.Add(pdfTable);
+                    pdfDoc.Close();
+                }
+
+                MessageBox.Show("PDF report generated successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error generating PDF: " + ex.Message);
             }
         }
     }

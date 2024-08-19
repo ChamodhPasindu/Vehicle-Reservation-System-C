@@ -38,6 +38,9 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.dgvReportData = new System.Windows.Forms.DataGridView();
             this.btnExportToPDF = new System.Windows.Forms.Button();
             this.groupBoxFilter = new System.Windows.Forms.GroupBox();
+            this.btnCustomerReport = new System.Windows.Forms.Button();
+            this.btnCarPartReport = new System.Windows.Forms.Button();
+            this.btnCarReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportData)).BeginInit();
             this.groupBoxFilter.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +96,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.dgvReportData.AllowUserToAddRows = false;
             this.dgvReportData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReportData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReportData.Location = new System.Drawing.Point(33, 145);
+            this.dgvReportData.Location = new System.Drawing.Point(33, 134);
             this.dgvReportData.Name = "dgvReportData";
             this.dgvReportData.RowHeadersWidth = 51;
             this.dgvReportData.Size = new System.Drawing.Size(831, 340);
@@ -125,8 +128,41 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
             this.groupBoxFilter.TabStop = false;
             this.groupBoxFilter.Text = "Filter";
             // 
+            // btnCustomerReport
+            // 
+            this.btnCustomerReport.Location = new System.Drawing.Point(33, 483);
+            this.btnCustomerReport.Name = "btnCustomerReport";
+            this.btnCustomerReport.Size = new System.Drawing.Size(125, 33);
+            this.btnCustomerReport.TabIndex = 8;
+            this.btnCustomerReport.Text = "Customer Report";
+            this.btnCustomerReport.UseVisualStyleBackColor = true;
+            this.btnCustomerReport.Click += new System.EventHandler(this.BtnCustomerReport_Click);
+            // 
+            // btnCarPartReport
+            // 
+            this.btnCarPartReport.Location = new System.Drawing.Point(375, 483);
+            this.btnCarPartReport.Name = "btnCarPartReport";
+            this.btnCarPartReport.Size = new System.Drawing.Size(125, 33);
+            this.btnCarPartReport.TabIndex = 9;
+            this.btnCarPartReport.Text = "Car Part Report";
+            this.btnCarPartReport.UseVisualStyleBackColor = true;
+            this.btnCarPartReport.Click += new System.EventHandler(this.BtnCarPartReport_Click);
+            // 
+            // btnCarReport
+            // 
+            this.btnCarReport.Location = new System.Drawing.Point(739, 483);
+            this.btnCarReport.Name = "btnCarReport";
+            this.btnCarReport.Size = new System.Drawing.Size(125, 33);
+            this.btnCarReport.TabIndex = 10;
+            this.btnCarReport.Text = "Car Report";
+            this.btnCarReport.UseVisualStyleBackColor = true;
+            this.btnCarReport.Click += new System.EventHandler(this.BtnCarReport_Click);
+            // 
             // ReportControl
             // 
+            this.Controls.Add(this.btnCarReport);
+            this.Controls.Add(this.btnCarPartReport);
+            this.Controls.Add(this.btnCustomerReport);
             this.Controls.Add(this.groupBoxFilter);
             this.Controls.Add(this.dgvReportData);
             this.Name = "ReportControl";
@@ -138,5 +174,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         }
         #endregion
+
+        
     }
 }

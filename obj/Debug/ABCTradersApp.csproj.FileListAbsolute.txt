@@ -98,4 +98,4 @@ D:\Others\TOPUP\ABCTradersApp\bin\Debug\BouncyCastle.Cryptography.dll
 D:\Others\TOPUP\ABCTradersApp\bin\Debug\itextsharp.dll
 D:\Others\TOPUP\ABCTradersApp\bin\Debug\BouncyCastle.Cryptography.xml
 D:\Others\TOPUP\ABCTradersApp\bin\Debug\itextsharp.xml
-D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.s.resources
+D:\Others\TOPUP\ABCTradersApp\obj\Debug\ABCTradersApp.Forms.post_login_customer.customer_controls.DashboardControl.resources

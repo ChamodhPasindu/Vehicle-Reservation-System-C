@@ -2,12 +2,15 @@
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using ABCTradersApp.forms;
 
 namespace ABCTradersApp
 {
     public partial class RegisterForm : Form
     {
-        private PictureBox pictureBox1;
+        private PictureBox pictureBoxImage;
+        private string connectionString = DatabaseConfig.ConnectionString;
+
         public RegisterForm()
         {
             InitializeComponent();
@@ -65,8 +68,6 @@ namespace ABCTradersApp
                 return;
             }
 
-            // Insert into database
-            string connectionString = "Data Source=CHAMODH792\\SQLEXPRESS;Initial Catalog=ABCTradersDB;Integrated Security=True;Encrypt=False";
 
             try
             {

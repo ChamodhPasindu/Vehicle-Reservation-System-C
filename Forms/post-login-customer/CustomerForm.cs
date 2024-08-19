@@ -27,7 +27,7 @@ namespace ABCTradersApp
         {
             // Load dashboard controls into panelMainContent initially 
             panelMainContent.Controls.Clear();
-            s dashboard = new s(customerID);
+            DashboardControl dashboard = new DashboardControl(customerID);
             dashboard.Dock = DockStyle.Fill;
             panelMainContent.Controls.Add(dashboard);
         }
