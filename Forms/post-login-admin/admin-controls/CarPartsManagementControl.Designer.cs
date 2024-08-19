@@ -51,6 +51,7 @@
             // 
             // txtPartName
             // 
+            this.txtPartName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPartName.Location = new System.Drawing.Point(141, 28);
             this.txtPartName.Name = "txtPartName";
             this.txtPartName.Size = new System.Drawing.Size(200, 22);
@@ -58,6 +59,7 @@
             // 
             // txtPartNumber
             // 
+            this.txtPartNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPartNumber.Location = new System.Drawing.Point(141, 58);
             this.txtPartNumber.Name = "txtPartNumber";
             this.txtPartNumber.Size = new System.Drawing.Size(200, 22);
@@ -65,6 +67,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(141, 88);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(200, 22);
@@ -90,6 +93,7 @@
             // 
             // txtQuatity
             // 
+            this.txtQuatity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuatity.Location = new System.Drawing.Point(141, 121);
             this.txtQuatity.Name = "txtQuatity";
             this.txtQuatity.Size = new System.Drawing.Size(200, 22);

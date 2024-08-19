@@ -140,6 +140,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(130, 116);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(200, 22);
@@ -147,6 +148,7 @@
             // 
             // txtYear
             // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear.Location = new System.Drawing.Point(130, 85);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(200, 22);
@@ -154,6 +156,7 @@
             // 
             // txtManufacturer
             // 
+            this.txtManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtManufacturer.Location = new System.Drawing.Point(130, 56);
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.Size = new System.Drawing.Size(200, 22);
@@ -161,6 +164,7 @@
             // 
             // txtModel
             // 
+            this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModel.Location = new System.Drawing.Point(130, 29);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(200, 22);

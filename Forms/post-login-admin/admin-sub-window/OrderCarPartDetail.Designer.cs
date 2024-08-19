@@ -286,6 +286,7 @@
             this.MaximizeBox = false;
             this.Name = "OrderCarPartDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Car Part Details";
             this.groupBoxOrderInfo.ResumeLayout(false);
             this.groupBoxOrderInfo.PerformLayout();
             this.groupBoxCustomerInfo.ResumeLayout(false);
