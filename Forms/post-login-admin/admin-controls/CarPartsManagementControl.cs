@@ -72,6 +72,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //hanlde exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -149,6 +150,8 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //handle exceptions
+
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -289,6 +292,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 LoadCarPartsData();
 
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -334,6 +338,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void ClearTextFields()
         {
+            //clear all field to default state
             txtPartName.Text = string.Empty;
             txtPartNumber.Text = string.Empty;
             txtPrice.Text = string.Empty;

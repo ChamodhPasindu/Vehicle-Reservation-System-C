@@ -89,7 +89,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                     }
                 }
             }
-
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

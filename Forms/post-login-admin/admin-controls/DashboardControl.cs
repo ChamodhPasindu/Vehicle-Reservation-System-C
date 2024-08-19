@@ -62,6 +62,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     lblOrdersCount.Text = $"Number of Orders: {ordersCount}";
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

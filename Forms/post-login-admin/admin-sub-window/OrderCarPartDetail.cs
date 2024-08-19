@@ -23,6 +23,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
         {
             InitializeComponent();
             this.orderID = orderID;
+            //get order details and the items of that order
             LoadOrderDetails();
             LoadOrderItems();
         }

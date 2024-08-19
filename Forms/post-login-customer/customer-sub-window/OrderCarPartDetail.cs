@@ -96,6 +96,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
+            //close current window
             this.Close();
         }
 

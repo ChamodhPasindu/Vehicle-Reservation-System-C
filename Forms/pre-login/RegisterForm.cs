@@ -27,6 +27,7 @@ namespace ABCTradersApp
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
 
+            // null and empty check every single details
             if (string.IsNullOrEmpty(firstName))
             {
                 MessageBox.Show("First Name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -117,6 +118,7 @@ namespace ABCTradersApp
             this.Close();
         }
 
+        //helper method to validate email
         private bool IsValidEmail(string email)
         {
             try

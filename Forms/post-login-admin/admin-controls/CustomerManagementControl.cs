@@ -31,6 +31,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     adapter.Fill(dataTable);
                     dataGridViewCustomers.DataSource = dataTable;
 
+                    //add 'View' button
                     if (!dataGridViewCustomers.Columns.Contains("View"))
                     {
                         DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn
@@ -43,6 +44,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -55,6 +57,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void TxtSearch_TextChanged(object sender, EventArgs e)
         {
+            //check user enter text with the data grid view columns
             (dataGridViewCustomers.DataSource as DataTable).DefaultView.RowFilter = string.Format(
                 "FirstName LIKE '%{0}%' OR LastName LIKE '%{0}%' OR Email LIKE '%{0}%' OR Phone LIKE '%{0}%'",
                 txtSearch.Text);
@@ -72,6 +75,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void OpenCustomerDetailsForm(int customerID)
         {
+            //open new customer detail window
             CustomerDetailForm detailsForm = new CustomerDetailForm(customerID);
             detailsForm.ShowDialog();
         }

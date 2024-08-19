@@ -48,6 +48,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                     }
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -75,6 +76,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         private void CarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //when cell click in table,check it is view column and index
             if (e.ColumnIndex == carGridView.Columns["View"].Index && e.RowIndex >= 0)
             {
                 int carID = Convert.ToInt32(carGridView.Rows[e.RowIndex].Cells["CarID"].Value);
@@ -87,6 +89,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         private void CarDetailForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            //after close the car order form,load again car table 
             LoadAvailableCar();
         }
     }

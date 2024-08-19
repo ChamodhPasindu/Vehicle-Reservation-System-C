@@ -47,6 +47,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     dgvReportData.DataSource = reportData;
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,6 +72,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 return;
             }
 
+            // Create and configure a SaveFileDialog to specify the file path for the PDF
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 Filter = "PDF Files|*.pdf",
@@ -78,14 +80,17 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 FileName = "OrderReport"
             };
 
+            // Show the SaveFileDialog and check if the user clicked 'OK'
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = saveFileDialog.FileName;
 
                 try
                 {
+                    // Create a FileStream to write the PDF file to the selected path
                     using (FileStream stream = new FileStream(filePath, FileMode.Create))
                     {
+                        // Initialize a new PDF document with A4 page size and margins
                         Document pdfDoc = new Document(PageSize.A4, 25, 25, 30, 30);
                         PdfWriter.GetInstance(pdfDoc, stream);
                         pdfDoc.Open();
@@ -93,13 +98,17 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                         pdfDoc.Add(new Paragraph("From: " + dtpFromDate.Value.ToString("dd/MM/yyyy") + " To: " + dtpToDate.Value.ToString("dd/MM/yyyy")));
                         pdfDoc.Add(new Paragraph(" "));
 
+                        // Create a PDF table with the same number of columns as the DataGridView
                         PdfPTable pdfTable = new PdfPTable(dgvReportData.ColumnCount);
+
+                        // Add the column headers to the PDF table
                         foreach (DataGridViewColumn column in dgvReportData.Columns)
                         {
                             PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                             pdfTable.AddCell(cell);
                         }
 
+                        // Add the rows from the DataGridView to the PDF table
                         foreach (DataGridViewRow row in dgvReportData.Rows)
                         {
                             foreach (DataGridViewCell cell in row.Cells)
@@ -108,6 +117,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                             }
                         }
 
+                        // Add the completed table to the PDF document
                         pdfDoc.Add(pdfTable);
                         pdfDoc.Close();
                         stream.Close();
@@ -115,6 +125,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
                     MessageBox.Show("PDF generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                //handle exceptions
                 catch (Exception ex)
                 {
                     MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -173,6 +184,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //handle exceptions
             catch (Exception ex)
             {
                 MessageBox.Show("Error generating report: " + ex.Message);
@@ -214,6 +226,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
                 MessageBox.Show("PDF report generated successfully!");
             }
+            //handle exceptions
             catch (Exception ex)
             {
                 MessageBox.Show("Error generating PDF: " + ex.Message);

@@ -72,6 +72,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //hanld exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -143,6 +144,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //hanlde exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -200,6 +202,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                         }
                     }
                 }
+                //hanlde exceptions
                 catch (SqlException sqlEx)
                 {
                     MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -244,6 +247,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                         }
                     }
                 }
+                //handle exceptions
                 catch (SqlException sqlEx)
                 {
                     MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -277,6 +281,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                 LoadCarData(); // Refresh the table after deletion
                 ClearTextFields();
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -289,6 +294,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void ClearTextFields()
         {
+            //clear all field to default state
             txtModel.Clear();
             txtManufacturer.Clear();
             txtYear.Clear();

@@ -58,6 +58,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                     lblTotalOrdersValue.Text = totalOrders.ToString();
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

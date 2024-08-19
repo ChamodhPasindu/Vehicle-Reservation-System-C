@@ -139,6 +139,7 @@ namespace ABCTradersApp
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
+            //open register form
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
         }

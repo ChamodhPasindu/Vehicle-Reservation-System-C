@@ -52,6 +52,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void LoadOrderDetails()
         {
+            //get availabe cars that not orderd by any customer
             string query = @"SELECT o.OrderID, o.OrderDate, o.TotalAmount, 
                             c.CustomerID, c.FirstName, c.LastName, c.Email, c.Phone, 
                             car.CarID, car.Model, car.Manufacturer, car.Year

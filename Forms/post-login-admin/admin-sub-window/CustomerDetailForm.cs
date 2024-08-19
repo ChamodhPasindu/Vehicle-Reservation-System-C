@@ -70,6 +70,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     }
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -94,6 +95,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
                     lblTotalOrdersValue.Text = orderCount.ToString();
                 }
             }
+            //handle exceptions
             catch (SqlException sqlEx)
             {
                 MessageBox.Show($"Database error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -106,6 +108,7 @@ namespace ABCTradersApp.Forms.post_login_admin.admin_controls
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
+            //close current window
             this.Close();
         }
     }

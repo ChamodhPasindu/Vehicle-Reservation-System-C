@@ -133,9 +133,17 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                 return;
             }
 
-            int availableQuantity = Convert.ToInt32(lblAvailableQuantity.Text);
-            int orderQuantity = Convert.ToInt32(txtOrderQuantity.Text);
+            // Validate that txtOrderQuantity contains a valid integer
+            if (!int.TryParse(txtOrderQuantity.Text, out int orderQuantity))
+            {
+                // If the input cannot be converted to an integer, show a warning message and exit
+                MessageBox.Show("Please enter a valid numeric value for order quantity.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            int availableQuantity = Convert.ToInt32(lblAvailableQuantity.Text);
+
+            //check customer order quantity and stock available quantity
             if (orderQuantity > availableQuantity)
             {
                 MessageBox.Show("Quantity exceeds available stock.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -212,6 +220,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
                     MessageBox.Show("Order placed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearTextFields();
                 }
+                //handle exceptions
                 catch (Exception ex)
                 {
                     transaction.Rollback();
@@ -223,6 +232,7 @@ namespace ABCTradersApp.Forms.post_login_customer.customer_controls
 
         private void ClearTextFields()
         {
+            //clear all text field and get default state
             this.cmbPartName.SelectedIndex = 0;
 
             lblPrice.Text = string.Empty;
